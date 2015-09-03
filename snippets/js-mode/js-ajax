@@ -1,0 +1,29 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: js-ajax
+# key: ajax-form
+# binding: direct-keybinding
+# --
+
+$.ajax({
+    type: ${1:$$(yas-choose-value '("'POST'" "'GET'"))},
+    url: $2,
+    beforeSend: ${3:function(e){
+        /*
+            function called before send
+         */
+    }},
+    success:  ${4:function(e){
+        /*
+            function called after success
+         */
+    }},
+    error:  ${5:function(e){
+        /*
+            function called on fail
+         */
+    }},
+    data: $6,
+    contentType: ${7:false},
+    cache: ${8:false},
+    processData: ${9:false}
+})

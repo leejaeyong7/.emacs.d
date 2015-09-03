@@ -1,0 +1,14 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: js-new-function
+# key: new-function
+# binding: direct-keybinding
+# --
+
+/**
+ *  $3
+ *  @param: $4
+ *  @return: $5
+ */
+function $1($2){
+    $6
+}

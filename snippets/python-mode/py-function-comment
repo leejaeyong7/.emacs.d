@@ -1,0 +1,12 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: py-function-comment
+# key: function-comment
+# binding: direct-keybinding
+# --
+
+"""$1
+
+Keyword param :
+$2
+
+"""
