@@ -43,7 +43,7 @@
 ;haskell interaction
 (when (or (when (eq system-type 'gnu/linux) (file-exists-p "/bin/ghc"))
           (when (eq system-type 'windows-nt) (file-directory-p "~/ghc"))
-          (when (eq system-type 'darwin) (file-exists-p "/opt/local/bin/ghc")))
+          (when (eq system-type 'darwin) (or (file-exists-p "/opt/local/bin/ghc") (file-exists-p "/usr/bin/ghc"))))
   (progn
     (setq package-list (append package-list '(haskell-mode ghc cl-lib company company-ghc flycheck-haskell)))
     (when (eq system-type 'darwin) (add-to-list 'package-list 'exec-path-from-shell))))
@@ -213,7 +213,7 @@
 
 ;;--------------------------------------------------------------------------------------------------
 (require 'evil)
-(evil-mode 1)
+(evil-mode 0)
     
 ;;--------------------------------------------------------------------------------------------------
 ;;
