@@ -50,7 +50,7 @@
 
 ;lisp loadpath
 (when (eq system-type 'gnu/linux) (add-to-list 'load-path "~/.emacs.d/lisp"))
-
+;(when (file-exists-p "~/.emacs.d/misc") (add-to-list 'load-path "~/.emacs.d/misc"))
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
                          ("marmalade" . "http://marmalade-repo.org/packages/")
 			               ("melpa" . "http://melpa.org/packages/")
