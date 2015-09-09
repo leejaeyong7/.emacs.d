@@ -5,9 +5,11 @@
       '(
         completion-at-point
         copy-rectangle-as-kill
+        end-of-buffer
         indent-for-tab-command
         kill-region
         move-to-window-line-top-bottom
+        org-self-insert-command
         python-nav-backward-block
         python-nav-forward-block
         ))

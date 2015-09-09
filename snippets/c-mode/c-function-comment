@@ -1,0 +1,15 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: c-function-comment
+# key: function-comment
+# binding: direct-keybinding
+# --
+
+/*
+ * function    : $1
+ * description : $2
+ *
+ * parameter   : $3
+ *
+ * return      : $4
+ *
+ */
