@@ -1,0 +1,31 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: bootstrap-new-modal
+# key: new-modal
+# binding: direct-keybinding
+# --
+
+        
+<div class="modal fade" id="$1"  role="dialog" aria-labelledby="$1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="row">
+          <div class="col-md-11 col-sm-11 col-xs-11">
+            <h4 class="modal-title">$2</h4>
+          </div>
+          <div class="col-md-1 col-sm-1 col-xs-1">
+            <button type="button" class="modal-exit close-button" data-dismiss="modal" aria-label="Close">
+              <span style="color:red" class="glyphicon glyphicon-remove" aria-hidden="true" ></span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="modal-body">
+           
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default close-button" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
