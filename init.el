@@ -202,19 +202,16 @@
 (add-hook 'flycheck-mode-hook #'flycheck-haskell-setup)
 
 ;;--------------------------------------------------------------------------------------------------
-(when (file-exists-p "~/.emacs.d/recentf.el")
-  (progn
-    (require 'recentf)
-    (recentf-mode 1)
-    (setq recentf-max-menu-items 25)
-    (global-set-key (kbd "C-x C-r") 'recentf-open-files)
-    ))
+(recentf-mode 1)
+(setq recentf-max-menu-items 25)
+(global-set-key (kbd "C-x C-r") 'recentf-open-files)
+
  
 
 ;;--------------------------------------------------------------------------------------------------
 (require 'evil)
-(evil-mode 0)
-(global-undo-tree-mode 0)
+(evil-mode 1)
+(global-undo-tree-mode 1)
     
 ;;--------------------------------------------------------------------------------------------------
 ;;
