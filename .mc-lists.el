@@ -6,6 +6,9 @@
         completion-at-point
         copy-rectangle-as-kill
         end-of-buffer
+        evil-change
+        evil-delete
+        evil-force-normal-state
         indent-for-tab-command
         kill-region
         move-to-window-line-top-bottom

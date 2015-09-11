@@ -1,9 +1,9 @@
-
 ;;--------------------------------------------------------------------------------------------------
 ;;
 ;;    Basic customizations
 ;;
 ;;--------------------------------------------------------------------------------------------------
+
 (set-face-attribute 'default nil
  :inherit nil
  :stipple nil
@@ -19,7 +19,7 @@
  :height 98
  :width 'normal
  :foundry "outline"
- :family "Inconsolata")
+ :family "Consolas")
 
 
 
@@ -33,7 +33,7 @@
 
 
 (require 'package) ;; You might already have this line
-(setq package-list '(multiple-cursors emmet-mode org ssh yasnippet flycheck evil))
+(setq package-list '(multiple-cursors emmet-mode org ssh yasnippet flycheck evil writeroom-mode))
 (setq debug-on-error t)
 
 ;check system for package-list addition
@@ -52,7 +52,7 @@
 (when (eq system-type 'gnu/linux) (add-to-list 'load-path "~/.emacs.d/lisp"))
 ;(when (file-exists-p "~/.emacs.d/misc") (add-to-list 'load-path "~/.emacs.d/misc"))
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-                         ("marmalade" . "http://marmalade-repo.org/packages/")
+                         ("marmalade" . "https://marmalade-repo.org/packages/")
 			               ("melpa" . "http://melpa.org/packages/")
 			 ;("melpa" . "http://melpa-stable.milkbox.net/packages/")
 			 ))
@@ -97,7 +97,38 @@
 (global-set-key (kbd "C-S-n") 'mc/unmark-previous-like-this)
 (global-set-key (kbd "C-S-m") 'mc/unmark-next-like-this)
 (global-set-key (kbd "C-c C->") 'mc/mark-all-dwim)
-
+(setq mc/cmds-to-run-for-all (append mc/cmds-to-run-for-all
+                                     '(c-electric-paren
+                                       evil-append
+                                       evil-append-line
+                                       evil-backward-char
+                                       evil-backward-paragraph
+                                       evil-backward-word-begin
+                                       evil-change
+                                       evil-delete
+                                       evil-delete-backward-char-and-join
+                                       evil-delete-char
+                                       evil-downcase
+                                       evil-end-of-line
+                                       evil-escape-insert-state
+                                       evil-first-non-blank
+                                       evil-force-normal-state
+                                       evil-forward-char
+                                       evil-forward-paragraph
+                                       evil-forward-word-begin
+                                       evil-forward-word-end
+                                       evil-goto-line
+                                       evil-insert
+                                       evil-jump-item
+                                       evil-next-line
+                                       evil-normal-state
+                                       evil-paste-after
+                                       evil-previous-line
+                                       evil-search-next
+                                       evil-snipe-f
+                                       evil-visual-char
+                                       evil-visual-line
+                                       evil-yank)))
 ;;--------------------------------------------------------------------------------------------------
 
 (when (package-installed-p 'emmet-mode)
@@ -212,6 +243,15 @@
 (require 'evil)
 (evil-mode 1)
 (global-undo-tree-mode 1)
+
+
+
+;;--------------------------------------------------------------------------------------------------
+(add-hook 'asm-mode-hook
+          (lambda () (interactive) (modify-syntax-entry ?# "< b")))
+
+;;--------------------------------------------------------------------------------------------------
+(require 'writeroom-mode)
     
 ;;--------------------------------------------------------------------------------------------------
 ;;
@@ -221,7 +261,9 @@
 
 (global-unset-key (kbd "C-x C-b"))
 (global-set-key (kbd "C-x C-b")(lambda () (interactive) (ibuffer t)))
+(global-unset-key [(shift f11)])
 
+(global-set-key [(shift f11)] 'writeroom-mode)
 
 
 ;;--------------------------------------------------------------------------------------------------
@@ -240,11 +282,14 @@
  '(haskell-process-suggest-remove-import-lines t)
  '(haskell-process-type (quote ghci))
  '(package-selected-packages
-   (quote
-    (flycheck-haskell flycheck yasnippet ssh multiple-cursors emmet-mode company-ghc))))
+        (quote
+         (writeroom-mode flycheck-haskell flycheck yasnippet ssh multiple-cursors emmet-mode company-ghc)))
+ '(writeroom-mode-line t)
+ '(writeroom-restore-window-config t))
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "gray100" :foreground "gray0" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 100 :width normal :foundry "nil" :family "Inconsolata")))))
+ )
