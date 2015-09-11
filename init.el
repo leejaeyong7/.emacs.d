@@ -16,7 +16,7 @@
  :underline nil
  :slant 'normal
  :weight 'normal
- :height 98
+ :height 120 
  :width 'normal
  :foundry "outline"
  :family "Consolas")
