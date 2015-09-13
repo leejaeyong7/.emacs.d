@@ -34,15 +34,38 @@
 
 ;lisp loadpath
 (require 'package) ;; You might already have this line
-(setq package-list '(multiple-cursors emmet-mode org ssh yasnippet flycheck evil writeroom-mode haskell-mode ghc cl-lib company company-ghc flycheck-haskell exec-path-from-shell tramp))
+(setq package-list '(multiple-cursors
+                     emmet-mode
+                     org
+                     ssh
+                     yasnippet
+                     flycheck
+                     evil
+                     writeroom-mode
+                     haskell-mode
+                     ghc
+                     cl-lib
+                     company
+                     company-ghc
+                     flycheck-haskell
+                     exec-path-from-shell
+                     tramp
+                     evil-tabs
+                     evil-org
+                     evil-leader
+                     evil-surround
+                     evil-nerd-commenter
+                     irony
+                     company-irony
+    ))
 (setq debug-on-error t)
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
                          ("marmalade" . "https://marmalade-repo.org/packages/")
 			               ("melpa" . "http://melpa.org/packages/")
 			 ))
 (package-initialize) ;; You might already have this line
-
-
+;add homebrew path on os x
+(when (eq system-type 'darwin) (exec-path-from-shell-initialize))
 
 ;;--------------------------------------------------------------------------------------------------
 ;;
@@ -162,18 +185,61 @@
  
 
 ;;--------------------------------------------------------------------------------------------------
+(add-to-list 'load-path "~/.emacs.d/plugins/evil-org-mode")
 (require 'evil)
 (setq evil-want-C-u-scroll t)    
 (evil-mode 1)
+(global-evil-leader-mode)
+(global-evil-tabs-mode t)
 (global-undo-tree-mode 1)
 (global-unset-key (kbd "C-u"))
-(global-set-key (kbd "C-u") 'evil-scroll-up)
+(global-set-key (kbd "C-u") 'evil-scroll-up)    
+   
+(evil-leader/set-leader ",")
+(evil-leader/set-key
+  "e" 'find-file
+  "b" 'switch-to-buffer
+  "k" 'kill-buffer
+  "ci" 'evilnc-comment-or-uncomment-lines
+  "cl" 'evilnc-quick-comment-or-uncomment-to-the-line
+  "ll" 'evilnc-quick-comment-or-uncomment-to-the-line
+  "cc" 'evilnc-copy-and-comment-lines
+  "cp" 'evilnc-comment-or-uncomment-paragraphs
+  "cr" 'comment-or-uncomment-region
+  "cv" 'evilnc-toggle-invert-comment-line-by-line
+  "\\" 'evilnc-comment-operator ; if you prefer backslash key
+    )
+
+
+(require 'evil-surround)
+(global-evil-surround-mode 1)
+    
+(global-set-key (kbd "M-;") 'evilnc-comment-or-uncomment-lines)
+(global-set-key (kbd "C-c l") 'evilnc-quick-comment-or-uncomment-to-the-line)
+(global-set-key (kbd "C-c c") 'evilnc-copy-and-comment-lines)
+(global-set-key (kbd "C-c p") 'evilnc-comment-or-uncomment-paragraphs)
+;;--------------------------------------------------------------------------------------------------
+(add-hook 'after-init-hook 'global-company-mode)
+(eval-after-load 'company
+  '(add-to-list 'company-backends 'company-irony))
+(add-hook 'c++-mode-hook 'irony-mode)
+(add-hook 'c-mode-hook 'irony-mode)
+(add-hook 'objc-mode-hook 'irony-mode)
+;; replace the `completion-at-point' and `complete-symbol' bindings in
+;; irony-mode's buffers by irony-mode's function
+(defun my-irony-mode-hook ()
+  (define-key irony-mode-map [remap completion-at-point]
+    'irony-completion-at-point-async)
+  (define-key irony-mode-map [remap complete-symbol]
+    'irony-completion-at-point-async))
+(add-hook 'irony-mode-hook 'my-irony-mode-hook)
+(add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
 
 ;;--------------------------------------------------------------------------------------------------
 (add-hook 'asm-mode-hook
           (lambda () (interactive) (modify-syntax-entry ?# "< b")))
     
-;; backup data-----------
+;;--------------------------------------------------------------------------------------------------
 
 
 ;;--------------------------------------------------------------------------------------------------
