@@ -1,1 +1,0 @@
-("~/.emacs.d/" "~/Documents/Academics/Research/Joe/'15 Fall/3D library/" "c:/Users/JaeYong/Dropbox/emacs/" "~/Documents/Work/flying-superintendents/" "~/Dropbox/emacs/" "c:/Users/JaeYong/Documents/Work/flying-superintendents/")

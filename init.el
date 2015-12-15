@@ -207,9 +207,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
-'(package-selected-packages
-   (quote
-    (writeroom-mode flycheck yasnippet ssh emmet-mode )))
+ '(package-selected-packages (quote (writeroom-mode flycheck yasnippet ssh emmet-mode)))
  '(writeroom-mode-line t)
  '(writeroom-restore-window-config t))
 
@@ -218,4 +216,4 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "gray17" :foreground "white" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 120 :width normal :foundry "nil" :family "Consolas")))))
+ '(default ((t (:inherit nil :stipple nil :background "gray17" :foreground "white" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 120 :width normal :foundry "unknown" :family "Inconsolata")))))
