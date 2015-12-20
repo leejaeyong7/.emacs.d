@@ -1,0 +1,13 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: cpp-header-comment
+# key: header-comment
+# binding: direct-keybinding
+# --
+/*============================================================================
+ * @author: Jae Yong Lee
+ * @file: ${1:`(file-name-nondirectory (buffer-file-name))`}
+ * @version: $2 
+ * @summary:
+ *      $3
+ *
+ *============================================================================*/

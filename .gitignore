@@ -1,6 +1,8 @@
 recentf
 recentf~
 *~
+*.elc
 irony/
 auto-save-list/
 url/
+#*#

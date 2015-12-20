@@ -1,0 +1,465 @@
+;; Object mp2/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "mp2/"
+  :tables
+  (list
+    (semanticdb-table "modex.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("fcntl.h" include (:system-flag t) nil [1790 1808])
+            ("stdio.h" include (:system-flag t) nil [1809 1827])
+            ("string.h" include (:system-flag t) nil [1828 1847])
+            ("sys/io.h" include (:system-flag t) nil [1848 1867])
+            ("sys/mman.h" include (:system-flag t) nil [1868 1889])
+            ("unistd.h" include (:system-flag t) nil [1890 1909])
+            ("modex.h" include nil nil [1911 1929])
+            ("text.h" include nil nil [1930 1947])
+            ("SCROLL_SIZE" variable (:constant-flag t) nil [3105 3116])
+            ("SCREEN_SIZE" variable (:constant-flag t) nil [3161 3172])
+            ("BUILD_BUF_SIZE" variable (:constant-flag t) nil [3203 3217])
+            ("BUILD_BASE_INIT" variable (:constant-flag t) nil [3250 3265])
+            ("VID_MEM_SIZE" variable (:constant-flag t) nil [3352 3364])
+            ("MODE_X_MEM_SIZE" variable (:constant-flag t) nil [3386 3401])
+            ("NUM_SEQUENCER_REGS" variable (:constant-flag t) nil [3420 3438])
+            ("NUM_CRTC_REGS" variable (:constant-flag t) nil [3454 3467])
+            ("NUM_GRAPHICS_REGS" variable (:constant-flag t) nil [3488 3505])
+            ("NUM_ATTR_REGS" variable (:constant-flag t) nil [3522 3535])
+            ("mode_X_seq" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :default-value "{
+    0x0100, 0x2101, 0x0F02, 0x0003, 0x0604
+}"
+                :type "unsigned short")
+                nil [3588 3690])
+            ("mode_X_CRTC" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :default-value "{
+    0x5F00, 0x4F01, 0x5002, 0x8203, 0x5404, 0x8005, 0xBF06, 0x1F07,
+    0x0008, 0x4109, 0x000A, 0x000B, 0x000C, 0x000D, 0x000E, 0x000F,
+    0x9C10, 0x8E11, 0x8F12, 0x2813, 0x0014, 0x9615, 0xB916, 0xE317,
+    0xFF18
+}"
+                :type "unsigned short")
+                nil [3691 3961])
+            ("mode_X_attr" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :default-value "{
+    0x00, 0x00, 0x01, 0x01, 0x02, 0x02, 0x03, 0x03, 
+    0x04, 0x04, 0x05, 0x05, 0x06, 0x06, 0x07, 0x07, 
+    0x08, 0x08, 0x09, 0x09, 0x0A, 0x0A, 0x0B, 0x0B, 
+    0x0C, 0x0C, 0x0D, 0x0D, 0x0E, 0x0E, 0x0F, 0x0F,
+    0x10, 0x41, 0x11, 0x00, 0x12, 0x0F, 0x13, 0x00,
+    0x14, 0x00, 0x15, 0x00
+}"
+                :type "unsigned char")
+                nil [3962 4310])
+            ("mode_X_graphics" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :default-value "{
+    0x0000, 0x0001, 0x0002, 0x0003, 0x0004, 0x4005, 0x0506, 0x0F07,
+    0xFF08
+}"
+                :type "unsigned short")
+                nil [4311 4453])
+            ("text_seq" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :default-value "{
+    0x0100, 0x2001, 0x0302, 0x0003, 0x0204
+}"
+                :type "unsigned short")
+                nil [4512 4612])
+            ("text_CRTC" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :default-value "{
+    0x5F00, 0x4F01, 0x5002, 0x8203, 0x5504, 0x8105, 0xBF06, 0x1F07,
+    0x0008, 0x4F09, 0x0D0A, 0x0E0B, 0x000C, 0x000D, 0x000E, 0x000F,
+    0x9C10, 0x8E11, 0x8F12, 0x2813, 0x1F14, 0x9615, 0xB916, 0xA317,
+    0xFF18
+}"
+                :type "unsigned short")
+                nil [4613 4881])
+            ("text_attr" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :default-value "{
+    0x00, 0x00, 0x01, 0x01, 0x02, 0x02, 0x03, 0x03, 
+    0x04, 0x04, 0x05, 0x05, 0x06, 0x06, 0x07, 0x07, 
+    0x08, 0x08, 0x09, 0x09, 0x0A, 0x0A, 0x0B, 0x0B, 
+    0x0C, 0x0C, 0x0D, 0x0D, 0x0E, 0x0E, 0x0F, 0x0F,
+    0x10, 0x0C, 0x11, 0x00, 0x12, 0x0F, 0x13, 0x08,
+    0x14, 0x00, 0x15, 0x00
+}"
+                :type "unsigned char")
+                nil [4882 5228])
+            ("text_graphics" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :default-value "{
+    0x0000, 0x0001, 0x0002, 0x0003, 0x0004, 0x1005, 0x0E06, 0x0007,
+    0xFF08
+}"
+                :type "unsigned short")
+                nil [5229 5369])
+            ("open_memory_and_ports" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :type "int")
+                nil [5428 5464])
+            ("VGA_blank" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("blank_bit" variable (:type "int") (reparse-symbol arg-sub-list) [5488 5502]))                  
+                :type "void")
+                nil [5465 5503])
+            ("set_seq_regs_and_reset" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("table" variable
+                       (:dereference 1
+                        :type "unsigned short")
+                        (reparse-symbol arg-sub-list) [5540 5581])
+                    ("val" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [5590 5608]))                  
+                :type "void")
+                nil [5504 5609])
+            ("set_CRTC_registers" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("table" variable
+                       (:dereference 1
+                        :type "unsigned short")
+                        (reparse-symbol arg-sub-list) [5642 5678]))                  
+                :type "void")
+                nil [5610 5679])
+            ("set_attr_registers" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("table" variable
+                       (:dereference 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [5712 5751]))                  
+                :type "void")
+                nil [5680 5752])
+            ("set_graphics_registers" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("table" variable
+                       (:dereference 1
+                        :type "unsigned short")
+                        (reparse-symbol arg-sub-list) [5789 5829]))                  
+                :type "void")
+                nil [5753 5830])
+            ("fill_palette_mode_x" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :type "void")
+                nil [5831 5866])
+            ("fill_palette_text" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :type "void")
+                nil [5867 5900])
+            ("write_font_data" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :type "void")
+                nil [5901 5932])
+            ("set_text_mode_3" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("clear_scr" variable (:type "int") (reparse-symbol arg-sub-list) [5962 5976]))                  
+                :type "void")
+                nil [5933 5977])
+            ("copy_image" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("img" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [6002 6021])
+                    ("scr_addr" variable (:type "unsigned short") (reparse-symbol arg-sub-list) [6022 6046]))                  
+                :type "void")
+                nil [5978 6047])
+            ("MEM_FENCE_WIDTH" variable (:constant-flag t) nil [7445 7460])
+            ("MEM_FENCE_MAGIC" variable (:constant-flag t) nil [7512 7527])
+            ("build" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type "unsigned char")
+                nil [7533 7598])
+            ("img3_off" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [7599 7619])
+            ("img3" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type "unsigned char")
+                nil [7660 7687])
+            ("show_x" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [7727 7753])
+            ("show_y" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [7727 7753])
+            ("mem_image" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type "unsigned char")
+                nil [7838 7870])
+            ("target_img" variable
+               (:typemodifiers ("static")
+                :type "unsigned short")
+                nil [7913 7946])
+            ("horiz_line_fn" function
+               (:prototype-flag t
+                :function-pointer t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [8204 8208])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [8209 8213])
+                    ("" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [8214 8241]))                  
+                :type "void")
+                nil [8174 8243])
+            ("vert_line_fn" function
+               (:prototype-flag t
+                :function-pointer t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [8273 8277])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [8278 8282])
+                    ("" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [8283 8310]))                  
+                :type "void")
+                nil [8244 8312])
+            ("SET_WRITE_MASK" variable (:constant-flag t) nil [8507 8521])
+            ("OUTB" variable (:constant-flag t) nil [9058 9062])
+            ("OUTW" variable (:constant-flag t) nil [9650 9654])
+            ("REP_OUTSW" variable (:constant-flag t) nil [10266 10275])
+            ("REP_OUTSB" variable (:constant-flag t) nil [11150 11159])
+            ("set_mode_X" function
+               (:arguments 
+                  ( ("horiz_fill_fn" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [12701 12705])
+                            ("" variable (:type "int") (reparse-symbol arg-sub-list) [12706 12710])
+                            ("" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [12711 12738]))                          
+                        :type "void")
+                        nil nil)
+                    ("vert_fill_fn" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [12775 12779])
+                            ("" variable (:type "int") (reparse-symbol arg-sub-list) [12780 12784])
+                            ("" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [12785 12812]))                          
+                        :type "void")
+                        nil nil))                  
+                :type "int")
+                nil [12662 14869])
+            ("clear_mode_X" function (:type "void") nil [15162 15825])
+            ("set_view_window" function
+               (:arguments 
+                  ( ("scr_x" variable (:type "int") (reparse-symbol arg-sub-list) [16604 16614])
+                    ("scr_y" variable (:type "int") (reparse-symbol arg-sub-list) [16615 16625]))                  
+                :type "void")
+                nil [16582 20176])
+            ("show_screen" function (:type "void") nil [20474 21473])
+            ("clear_screens" function (:type "void") nil [21686 21887])
+            ("draw_vert_line" function
+               (:arguments 
+                  ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [22929 22935]))                  
+                :type "int")
+                nil [22909 22980])
+            ("draw_horiz_line" function
+               (:arguments 
+                  ( ("y" variable (:type "int") (reparse-symbol arg-sub-list) [23662 23668]))                  
+                :type "int")
+                nil [23641 24723])
+            ("open_memory_and_ports" function
+               (:typemodifiers ("static")
+                :type "int")
+                nil [25070 25849])
+            ("VGA_blank" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("blank_bit" variable (:type "int") (reparse-symbol arg-sub-list) [26075 26089]))                  
+                :type "void")
+                nil [26052 27179])
+            ("set_seq_regs_and_reset" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("table" variable
+                       (:dereference 1
+                        :type "unsigned short")
+                        (reparse-symbol arg-sub-list) [27720 27761])
+                    ("val" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [27765 27783]))                  
+                :type "void")
+                nil [27684 28221])
+            ("set_CRTC_registers" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("table" variable
+                       (:dereference 1
+                        :type "unsigned short")
+                        (reparse-symbol arg-sub-list) [28486 28522]))                  
+                :type "void")
+                nil [28454 28677])
+            ("set_attr_registers" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("table" variable
+                       (:dereference 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [29075 29114]))                  
+                :type "void")
+                nil [29042 29322])
+            ("set_graphics_registers" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("table" variable
+                       (:dereference 1
+                        :type "unsigned short")
+                        (reparse-symbol arg-sub-list) [29573 29613]))                  
+                :type "void")
+                nil [29537 29667])
+            ("fill_palette_mode_x" function
+               (:typemodifiers ("static")
+                :type "void")
+                nil [29967 31655])
+            ("fill_palette_text" function
+               (:typemodifiers ("static")
+                :type "void")
+                nil [31930 33022])
+            ("write_font_data" function
+               (:typemodifiers ("static")
+                :type "void")
+                nil [33311 34160])
+            ("set_text_mode_3" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("clear_scr" variable (:type "int") (reparse-symbol arg-sub-list) [34464 34478]))                  
+                :type "void")
+                nil [34435 35585])
+            ("copy_image" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("img" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [35997 36016])
+                    ("scr_addr" variable (:type "unsigned short") (reparse-symbol arg-sub-list) [36017 36041]))                  
+                :type "void")
+                nil [35973 36580]))          
+      :file "modex.c"
+      :pointmax 37442
+      :fsize 37441
+      :lastmodtime '(22015 27299 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("BUILD_BUF_SIZE" . ((semantic-list "(SCREEN_SIZE + 20000)" 3219 . 3240)))
+          ("OUTW" (spp-arg-list ("port" "val") 9654 . 9664) . 
+              ((DO "do" 9716 . 9718) (semantic-list "{                                                                    \\
+    asm volatile (\"                                                     \\
+        outw %w1,(%w0)                                                  \\
+    \" : /* no outputs */                                                \\
+      : \"d\" ((port)), \"a\" ((val))                                       \\
+      : \"memory\", \"cc\");                                                \\
+}" 9719 . 10161) (WHILE "while" 10162 . 10167) (semantic-list "(0)" 10168 . 10171)))
+          ("SCREEN_SIZE" . ((semantic-list "(SCROLL_SIZE * 4 + 1)" 3173 . 3194)))
+          ("BUILD_BASE_INIT" . ((semantic-list "((BUILD_BUF_SIZE - SCREEN_SIZE) / 2)" 3266 . 3302)))
+          ("NUM_SEQUENCER_REGS" . ((number "5" 3444 . 3445)))
+          ("MODE_X_MEM_SIZE" . ((number "65536" 3406 . 3411)))
+          ("NUM_ATTR_REGS" . ((number "22" 3545 . 3547)))
+          ("OUTB" (spp-arg-list ("port" "val") 9062 . 9072) . 
+              ((DO "do" 9124 . 9126) (semantic-list "{                                                                    \\
+    asm volatile (\"                                                     \\
+        outb %b1,(%w0)                                                  \\
+    \" : /* no outputs */                                                \\
+      : \"d\" ((port)), \"a\" ((val))                                       \\
+      : \"memory\", \"cc\");                                                \\
+}" 9127 . 9569) (WHILE "while" 9570 . 9575) (semantic-list "(0)" 9576 . 9579)))
+          ("REP_OUTSW" (spp-arg-list ("port" "source" "count") 10275 . 10294) . 
+              ((DO "do" 10332 . 10334) (semantic-list "{                                                                    \\
+    asm volatile (\"                                                     \\
+     1: movw 0(%1),%%ax                                                ;\\
+	outw %%ax,(%w2)                                                ;\\
+	addl $2,%1                                                     ;\\
+	decl %0                                                        ;\\
+	jne 1b                                                          \\
+    \" : /* no outputs */                                                \\
+      : \"c\" ((count)), \"S\" ((source)), \"d\" ((port))                     \\
+      : \"eax\", \"memory\", \"cc\");                                         \\
+}" 10335 . 11045) (WHILE "while" 11046 . 11051) (semantic-list "(0)" 11052 . 11055)))
+          ("NUM_GRAPHICS_REGS" . ((number "9" 3512 . 3513)))
+          ("MEM_FENCE_WIDTH" . ((number "256" 7461 . 7464)))
+          ("SCROLL_SIZE" . ((semantic-list "(SCROLL_X_WIDTH * SCROLL_Y_DIM)" 3121 . 3152)))
+          ("VID_MEM_SIZE" . ((number "131072" 3371 . 3377)))
+          ("REP_OUTSB" (spp-arg-list ("port" "source" "count") 11159 . 11178) . 
+              ((DO "do" 11216 . 11218) (semantic-list "{                                                                    \\
+    asm volatile (\"                                                     \\
+     1: movb 0(%1),%%al                                                ;\\
+	outb %%al,(%w2)                                                ;\\
+	incl %1                                                        ;\\
+	decl %0                                                        ;\\
+	jne 1b                                                          \\
+    \" : /* no outputs */                                                \\
+      : \"c\" ((count)), \"S\" ((source)), \"d\" ((port))                     \\
+      : \"eax\", \"memory\", \"cc\");                                         \\
+}" 11219 . 11929) (WHILE "while" 11930 . 11935) (semantic-list "(0)" 11936 . 11939)))
+          ("NUM_CRTC_REGS" . ((number "25" 3477 . 3479)))
+          ("MEM_FENCE_MAGIC" . ((number "0xF3" 7528 . 7532)))
+          ("SET_WRITE_MASK" (spp-arg-list ("mask_hi_bits") 8521 . 8535) . 
+              ((DO "do" 8573 . 8575) (semantic-list "{                                                                    \\
+    asm volatile (\"                                                     \\
+	movw $0x03C4,%%dx    	/* set write mask                    */;\\
+	movb $0x02,%b0                                                 ;\\
+	outw %w0,(%%dx)                                                 \\
+    \" : : \"a\" ((mask_hi_bits)) : \"edx\", \"memory\");                      \\
+}" 8576 . 8995) (WHILE "while" 8996 . 9001) (semantic-list "(0)" 9002 . 9005)))
+          )
+)
+    (semanticdb-table "modex.h"
+      :file "modex.h"
+      :fsize 5900
+      :lastmodtime '(22015 27299 0 0))
+    (semanticdb-table "text.h"
+      :file "text.h"
+      :fsize 1703
+      :lastmodtime '(22015 27299 0 0))
+    (semanticdb-table "Makefile"
+      :major-mode 'makefile-bsdmake-mode
+      :tags 
+        '( ("all" function (:arguments ("adventure" "tr" "mp2photo" "mp2object")) nil [1 38])
+            ("HEADERS" variable (:default-value ("assert.h" "input.h" "modex.h" "photo.h" "photo_headers.h" "text.h" "types.h" "world.h" "Makefile")) nil [39 131])
+            ("OBJS" variable (:default-value ("adventure.o" "assert.o" "modex.o" "input.o" "photo.o" "text.o" "world.o")) nil [131 196])
+            ("CFLAGS" variable (:default-value ("-g" "-Wall")) nil [197 213])
+            ("adventure" function (:arguments ("${OBJS}")) nil [214 277])
+            ("tr" function (:arguments ("modex.c" "${HEADERS}" "text.o")) nil [278 369])
+            ("mp2photo" function (:arguments ("${HEADERS}")) nil [370 429])
+            ("mp2object" function (:arguments ("${HEADERS}")) nil [430 514])
+            ("%.o" function (:arguments ("%.c" "${HEADERS}")) nil [515 562])
+            ("%.o" function (:arguments ("%.s" "${HEADERS}")) nil [563 610])
+            ("clean" function nil nil [611 639])
+            ("clear" function (:arguments ("clean")) nil [640 692]))          
+      :file "Makefile"
+      :pointmax 692
+      :fsize 691
+      :lastmodtime '(22015 27299 0 0)
+      :unmatched-syntax '((shell-command 654 . 691) (bol 653 . 653))))
+  :file "!Users!jae!Documents!Academics!ECE391!MP!mp2!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

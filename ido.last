@@ -1,0 +1,133 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/Users/jae/Documents/Academics/Research/Joe/'15 Fall/" . "3D library/")
+ ("/Users/jae/Documents/Academics/Research/Joe/" . "'15 Fall/")
+ ("/Users/jae/Documents/Academics/Research/" . "Joe/")
+ ("c:/Users/JaeYong/Documents/Research/" . "jae-nlp/")
+ ("c:/Users/JaeYong/Documents/" . "Research/")
+ ("c:/Users/JaeYong/" . "Documents/")
+ ("c:/Users/JaeYong/Documents/Work/flying-superintendents/viewer/" . "css/")
+ ("/Users/jae/" . "Documents/")
+ ("/Users/jae/Documents/Work/flying-superintendents/viewer/" . "flaskapp/")
+ ("/Users/jae/Documents/Work/flying-superintendents/" . "viewer/")
+ ("/Users/jae/Documents/Work/" . "flying-superintendents/")
+ ("/Users/jae/Documents/Academics/CS446/hw2/decision-trees/" . "src/")
+ ("/Users/jae/Documents/Academics/CS446/hw2/" . "decision-trees/")
+ ("/Users/jae/Documents/Academics/CS446/" . "hw2/")
+ ("/Users/jae/Documents/Academics/ECE391/" . "lectures/")
+ ("/Users/jae/Documents/Academics/" . "Research/")
+ ("/Users/jae/Documents/" . "Academics/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/Users/jae/Documents/Academics/Research/Joe/'15 Fall/3D library/"
+ "/Users/jae/Documents/Work/flying-superintendents/viewer/flaskapp/"
+ "c:/Users/JaeYong/Documents/Research/jae-nlp/"
+ "c:/Users/JaeYong/Documents/Work/flying-superintendents/viewer/css/"
+ "/Users/jae/Documents/Work/flying-superintendents/viewer/css/"
+ "/Users/jae/Documents/Work/flying-superintendents/viewer/scripts/"
+ "/Users/jae/Documents/Work/flying-superintendents/viewer/html/"
+ "/Users/jae/Documents/"
+ "/Users/jae/Documents/Academics/ECE391/lectures/"
+ "/Users/jae/Documents/Academics/CS446/hw2/decision-trees/src/"
+ "/Users/jae/Documents/Academics/CS446/hw2/"
+ "/Users/jae/Documents/Dev/Python/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "makefile"
+ "main.cpp"
+ "views.py"
+ "nlp.py"
+ "main-*"
+ "main-owner.css"
+ "main-commons.css"
+ "main-owner.js"
+ "login.js"
+ "login.css"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/Users/jae/Documents/Academics/Research/Joe/'15 Fall/3D library/" (22133 18675 0 0) "makefile" "main.out" "main.cpp" "3d libraries.pdf" "3d libraries.docx" "../" "./")
+
+ ("/Users/jae/Documents/Academics/Research/Joe/'15 Fall/" (22129 7446 0 0) "3D library/" ".DS_Store" "../" "./")
+
+ ("/Users/jae/Documents/Academics/Research/Joe/" (22129 3774 0 0) "svn/" ".DS_Store" "'15 Spring/" "'15 Fall/" "'14 Spring/" "'14 Fall/" "'13 Spring/" "../" "./")
+
+ ("/Users/jae/Documents/Academics/Research/" (22129 1827 0 0) "longle/" "Joe/" ".DS_Store" "../" "./")
+
+ ("/Users/jae/Documents/Academics/" (22129 10826 0 0) "University/" "Research/" "ETC/" ".DS_Store" "../" "./")
+
+ ("/Users/jae/Documents/" (22129 10856 0 0) "Work/" "Virtual Machines.localized/" "Personnal/" "Old/" "Living/" "Dev/" "Academics/" ".localized" ".DS_Store" "../" "./")
+
+ ("/Users/jae/" (22134 23035 0 0) "Public/" "Pictures/" "OneDrive/" "nltk_data/" "Music/" "Movies/" "Library/" "gtk/" "Google 드라이브/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "Applications/" ".Xauthority" ".vscode/" ".vimrc" ".viminfo" ".Trash/" ".thumbnails/" ".subversion/" ".ssh/" ".spacemacs" ".profile" ".oracle_jre_usage/" ".npm/" ".node-gyp/" ".mysql_history" ".mono/" ".mongorc.js" ".mcrCache8.4/" ".matplotlib/" ".matlab/" ".local/" ".lesshst" ".JIRAClient/" ".jhbuildrc-fw-10.4-test" ".jhbuildrc-fw-10.4" ".jhbuildrc-custom" ".jhbuildrc-cfw-10.4u" ".jhbuildrc-cfw-10.4" ".jhbuildrc" ".hgignore_global" ".gitignore_global" ".gitconfig" ".ghc/" ".emacs.d2/" ".emacs.d/" ".DS_Store" ".dropbox/" ".dbshell" ".cups/" ".config/" ".codeintel/" ".CFUserTextEncoding" ".cache/" ".cabal/" ".bash_sessions/" ".bash_profile~" ".bash_profile.macports-saved_2015-07-31_at_15:32:23" ".bash_profile" ".bash_history" ".anyconnect" ".android/" "../" "./")
+
+ ("/Users/jae/.emacs.d/" (22134 23220 0 0) "url/" "tramp" "snippets/" "server-0.xkb" "semanticdb/" "recentf~" "recentf" "projectile-bookmarks.eld" "misc/" "lisp/" "irony/" "init.el~" "init.el" "init-el-old" "ido.last~" "ido.last" "elpa/" "ede-projects.el" "bookmarks" "auto-save-list/" "ac-comphist.dat" ".mc-lists.el" ".gitignore" ".git/" ".emacs.desktop" ".DS_Store" ".#init.el" "#init.el#" "../" "./")
+
+ ("/Users/jae/Documents/Work/flying-superintendents/viewer/flaskapp/" (22076 58896 0 0) "views.pyc" "views.py" "nosql.pyc" "nosql.py" "login.pyc" "login.py" "database.pyc" "database.py" "config.cfg" "__init__.pyc" "__init__.py" ".gitignore" ".DS_Store" ".#views.py" "#views.py#" "../" "./")
+
+ ("/Users/jae/Documents/Work/flying-superintendents/viewer/html/" (22076 58097 0 0) "tree.html" "tools.html" "schedule.html" "request-sent.html" "project.html" "project-iterator.html" "pointcloud-viewer.html" "main-worker.html" "main-supervisor.html" "main-owner.html" "login.html" "correspondence-selector.html" "bim-loader.html" "base.html" "admin.html" ".DS_Store" "../" "./")
+
+ ("/Users/jae/Documents/Work/flying-superintendents/viewer/scripts/" (22076 57858 0 0) "zfeng6_ifcparser.js" "toggles.js" "third_party/" "saveModelImage.js" "registration.js" "project-iterator.js" "potree_sac_zf.js" "pointCloudRenderer.js" "orig_zfeng6_bim.js" "modelLoader.js" "modal.js" "main-owner.js" "login.js" "initScene_bim.js" "image_loader.js" "hd4ar/" "GeometryLoader.js" "deprecated/" "CustomControls.js" "camera.js" "bimtool.js" "bimserverapi-deprecated.js" "bim.js" ".DS_Store" "../" "./")
+
+ ("c:/Users/JaeYong/Documents/Research/jae-nlp/" (22076 31465 0 0) "../" "./")
+
+ ("c:/Users/JaeYong/Documents/Research/" (22076 31467 0 0) "sas/" "jae-nlp/" "IlliadAccess/" "'15S/" "../" "./")
+
+ ("c:/Users/JaeYong/Documents/" (22064 8634 0 0) "사용자 지정 Office 서식 파일/" "Work/" "Witcher 2/" "Visual Studio 2013/" "UploadEx/" "The Witcher 3/" "StarCraft II/" "School Work/" "SavedGames/" "Rockstar Games/" "Research/" "Rayman Legends/" "Project/" "PlanetExplorers/" "Outlook Files/" "My Videos/" "My Pictures/" "My Music/" "my games/" "My Digital Editions/" "MATLAB/" "KakaoTalk Downloads/" "Heroes of the Storm/" "GitHub/" "Diablo III/" "Dev/" "desktop.ini" "ChessBase/" "1Password/" "../" "./")
+
+ ("c:/Users/JaeYong/Documents/Work/flying-superintendents/viewer/css/" (22073 16683 0 0) "third_party/" "style.css" "project.css" "main.css" "main-owner.css" "main-commons.css" "login.css" "../" "./")
+
+ ("c:/Users/JaeYong/Documents/Work/flying-superintendents/viewer/" (22073 5449 0 0) "venv/" "scripts/" "run_script.sh" "run_script.bat" "run.py" "resources/" "requirements.txt" "README.md" "organizations/" "html/" "flaskapp/" "download-resources.sh" "css/" ".gitignore" "../" "./")
+
+ ("c:/Users/JaeYong/Documents/Work/flying-superintendents/viewer/html/" (22073 16676 0 0) "tree.html" "tools.html" "schedule.html" "request-sent.html" "project.html" "project-iterator.html" "pointcloud-viewer.html" "main-worker.html" "main-supervisor.html" "main-owner.html" "login.html" "correspondence-selector.html" "bim-loader.html" "base.html" "admin.html" "../" "./")
+
+ ("c:/Users/JaeYong/" (22073 16768 0 0) "_viminfo" "Videos/" "Templates/" "Start Menu/" "SendTo/" "Searches/" "Saved Games/" "Recent/" "PrintHood/" "Pictures/" "OneDrive/" "ntuser.ini" "NTUSER.DAT{77a2c7ed-26f0-11e5-80da-e41d2d741090}.TMContainer00000000000000000002.regtrans-ms" "NTUSER.DAT{77a2c7ed-26f0-11e5-80da-e41d2d741090}.TMContainer00000000000000000001.regtrans-ms" "NTUSER.DAT{77a2c7ed-26f0-11e5-80da-e41d2d741090}.TM.blf" "ntuser.dat.LOG2" "ntuser.dat.LOG1" "NTUSER.DAT" "NetHood/" "My Documents/" "Music/" "Local Settings/" "Links/" "iCloudDrive/" "Google Drive/" "Favorites/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "create_ap/" "Cookies/" "Contacts/" "Application Data/" "AppData/" "3D Objects/" ".vscode/" ".ssh/" ".oracle_jre_usage/" ".node-gyp/" ".gitconfig" ".codeintel/" ".atom/" "../" "./")
+
+ ("/Users/jae/Documents/Work/flying-superintendents/viewer/css/" (22073 16860 0 0) "third_party/" "style.css" "project.css" "main.css" "main-owner.css" "main-commons.css" "login.css" ".DS_Store" "../" "./")
+
+ ("/Users/" (22053 38473 0 0) "Shared/" "jae/" "Guest/" ".localized" "../" "./")
+
+ ("/Users/jae/Dropbox/" (22072 16368 0 0) "앱/" "WORK/" "Sublime/" "shs120selfrelection.docx" "Screenshots/" "part2-22.zip" "part2-1-5.zip" "LongJae/" "logo1.pdf" "logo1-1.png" "logo-vid.png" "logo-nav.png" "init.el" "Icon
+" "emacs/" "ECE385_lab_2.docx" "Driver's license/" "Binder For State Farm Automobile Insurance.pdf" "1Password/" ".ws.agile.1Password.settings" ".DS_Store" ".dropbox.cache/" ".dropbox" "../" "./")
+
+ ("/Users/jae/Dropbox/emacs/" (22073 17539 0 0) "url/" "tramp" "snippets/" "server-0.xkb" "semanticdb/" "recentf~" "recentf" "misc/" "lisp/" "irony/" "init.el~" "init.el" "init-el-old" "ido.last~" "ido.last" "elpa/" "ede-projects.el" "bookmarks" "auto-save-list/" "ac-comphist.dat" ".mc-lists.el" ".gitignore" ".git/" ".emacs.desktop" ".DS_Store" ".#recentf" ".#-emacsg76184" ".#-emacsf76184" ".#-emacse76184" ".#-emacsd76184" ".#-emacsc76184" ".#-emacsb76184" ".#-emacsb75236" ".#-emacsa86236" ".#-emacsa79128" ".#-emacsa76184" ".#-emacsa75236" "../" "./")
+
+ ("/Users/jae/Dropbox/emacs/auto-save-list/" (22073 17295 0 0) ".saves-949-mazayong~" ".saves-854-mazayong~" ".saves-6398-mazayong~" ".saves-61460-JAE_DESKTOP~" ".saves-21087-mazayong~" ".saves-17372-mazayong~" ".saves-1450-Jaeui-MacBook-Pro.local~" ".saves-1250-mazayong~" ".saves-1217-mazayong~" "../" "./")
+
+ ("/Users/jae/Documents/Academics/CS446/hw2/decision-trees/src/" (22027 1699 0 0) "WekaTester.java~" "WekaTester.java" "SGD.java~" "SGD.java" "misc/" "Id3.java" "HW2Tester.java~" "HW2Tester.java" "FeatureGenerator.java~" "FeatureGenerator.java" ".DS_Store" "../" "./")
+
+ ("/Users/jae/Documents/Academics/ECE391/lectures/" (22028 47048 0 0) "lecture9.org~" "lecture9.org" "lecture8.org~" "lecture8.org" "lecture7.org~" "lecture7.org" "lecture6.org~" "lecture6.org" "lecture5.org~" "lecture5.org" "lecture4.org~" "lecture4.org" "lecture3.org~" "lecture3.org" "lecture11.org" "lecture10.org~" "lecture10.org" ".DS_Store" "#lecture8.org#" "#lecture4.org#" "#lecture3.org#" "../" "./")
+
+ ("/Users/jae/Documents/Work/flying-superintendents/viewer/" (22039 63245 0 0) "web-ui.sublime-workspace" "web-ui.sublime-project" "venv/" "scripts/" "run_script.sh" "run_script.bat" "run.py" "resources/" "requirements.txt" "README.md" "pointclouds/" "organizations/" "models/" "html/" "flaskapp/" "download-resources.sh" "css/" ".gitignore" ".DS_Store" "../" "./")
+
+ ("/Users/jae/Documents/Work/flying-superintendents/" (22048 1529 0 0) "web.config" "viewer/" "tools/" "styleguides/" "README.md" "PotreeConverter/" "openMVG_src_PBA/" "openMVG_gpu/" "openMVG/" "notes/" "misc/" "docs/" ".gitignore" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/jae/Documents/Work/" (22035 36899 0 0) "settings.xml" "reports/" "olds/" "old/" "logo2.png" "logo.png" "Kings728FullGrey.ifc" "home/" "flying-superintendents/" "bimserver-1.4.0-FINAL-2015-08-25.jar" "bimserver-1.4.0-FINAL-2015-08-25/" ".DS_Store" "../" "./")
+
+ ("/Users/jae/Documents/Academics/CS446/hw2/" (22026 9957 0 0) "report/" "decision-trees.rar" "decision-trees/" "badges.test.arff" "badges.rar" "badges.features.arff" "badges.example2.arff" "badges.example.arff" "badges/" "arff/" ".DS_Store" "../" "./")
+
+ ("/Users/jae/Documents/Academics/CS446/hw2/decision-trees/" (22026 26984 0 0) "test.sh" "src/" "README" "Makefile" "lib/" "dt_full.txt" "dt_depth8.txt" "dt_depth4.txt" "bin/" ".DS_Store" "../" "./")
+
+ ("/Users/jae/Documents/Academics/CS446/hw2/part2/" (22024 63248 0 0) "README" "data/" "code/" ".DS_Store" "../" "./")
+
+ ("/Users/jae/Documents/Academics/CS446/hw2/part2/code/" (22024 64854 0 0) "test.sh" "src/" "Makefile" "lib/" "dt_full.0.txt" "dt_depth4.1.txt" "bin/" ".DS_Store" "../" "./")
+
+ ("/Users/jae/Documents/Academics/CS446/hw2/part2/code/src/" (22024 63311 0 0) "WekaTester.java" "predictionGenerator.java" "JaeTest.java" "JaeSGDTrunk.java" "JaeSGD.java" "Id3.java" "FeatureGenerator.java" ".DS_Store" "../" "./")
+
+ ("/Users/jae/Documents/Academics/CS446/hw2/badges/" (22024 39501 0 0) "badges.modified.data.fold5" "badges.modified.data.fold4" "badges.modified.data.fold3" "badges.modified.data.fold2" "badges.modified.data.fold1" "badges.modified.data.all" ".DS_Store" "../" "./")
+
+ ("/Users/jae/Documents/Dev/Python/" (22024 41552 0 0) "tree.png" "test.py" ".DS_Store" "../" "./")
+
+ ("/Users/jae/Documents/Academics/CS446/" (22024 41767 0 0) "hw2/" "hw1/" ".DS_Store" "../" "./")
+
+ ("/Users/jae/Documents/Academics/ECE391/" (22015 24047 0 0) "MP/" "lectures/" "Hw/" "ece391-vm/" ".DS_Store" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

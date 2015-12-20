@@ -1,0 +1,247 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Sat Sep 26 04:50:24 2015
+;; Desktop file format version 208
+;; Emacs version 25.0.50.1
+
+;; Global section:
+(setq desktop-saved-frameset [frameset 1 (22022 27232 428802 500000) (desktop . "208") "JaeYong@JAE_DESKTOP" nil nil ((((font-backend uniscribe gdi) (font . "-outline-Consolas-normal-normal-normal-mono-16-*-*-*-c-*-iso8859-1") (border-width . 2) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars) (horizontal-scroll-bars) (foreground-color . "white") (background-color . "gray17") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 8) (alpha 100 100) (menu-bar-lines . 0) (tool-bar-lines . 0) (height . 56) (title) (icon-type) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (scroll-bar-height . 0) (fullscreen . fullboth) (display-type . color) (background-mode . dark) (cursor-color . "white") (environment) (fontsize . 0) (frameset--id . "181E-BE9C-1E5B-D915") (frameset--mini t . t) (modeline . t) (minibuffer . t) (unsplittable) (icon-name) (display . "w32") (explicit-name) (tool-bar-position . top) (writeroom-fullscreen . fullboth) (writeroom-alpha 100 100) (writeroom-vertical-scroll-bars) (writeroom-menu-bar-lines . 0) (writeroom-tool-bar-lines . 0) (visibility . t) (width . 211) (left . 0) (top . 0)) ((min-height . 4) (min-width . 134) (min-height-ignore . 2) (min-width-ignore . 134) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 76) (min-pixel-width . 1206) (min-pixel-height-ignore . 38) (min-pixel-width-ignore . 1206) (min-pixel-height-safe . 19) (min-pixel-width-safe . 18)) leaf (pixel-width . 1920) (pixel-height . 1061) (total-width . 213) (total-height . 55) (normal-height . 1.0) (normal-width . 1.0) (buffer "modex.c" (selected . t) (hscroll . 0) (fringes 8 8 t) (margins 65 . 65) (scroll-bars nil 0 t nil 0 t) (vscroll . 0) (dedicated) (point . 24010) (start . 22222))))])
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring nil)
+(setq regexp-search-ring '("scroll_size" "horiz_line_fn" "vert_line_fn" "cedet" "vert_li"))
+(setq register-alist '((48 . ";;--------------------------------------------------------------------------------------------------\n;;asm-mode syntax\n;;--------------------------------------------------------------------------------------------------\n")))
+(setq file-name-history '("~/.emacs.d/init.el" "~/Documents/Academics/ECE391/MP/mp2/Project.ede" "~/Documents/Academics/ECE391/MP/mp2/modex.c" "~/Dropbox/emacs/init.el" "~/Documents/Academics/ECE391/MP/mp2/Makefile" "~/.emacs.d/elpa/auto-complete-20150618.1949/auto-complete-autoloads.el" "~/.emacs.d/elpa/popup-20150626.711/popup-autoloads.el" "~/Documents/Work/flying-superintendents/viewer/scripts/main-owner.js"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 208
+  "c:/Users/JaeYong/Documents/School Work/ECE 391/ece391/work/mps/mp2/modex.c"
+  "modex.c"
+  'c-mode
+  '(abbrev-mode yas-minor-mode flycheck-mode undo-tree-mode auto-complete-mode)
+  24010
+  '(24011 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (overwrite-mode))
+  '((mark-ring (19619 17690 3174 3105 2003 25633 23935 23935 23935 8188 25279 23564 13076 8188 25279 23564))))
+
+(desktop-create-buffer 208
+  "c:/Users/JaeYong/Documents/School Work/ECE 391/ece391/work/mps/mp2/modex.h"
+  "modex.h"
+  'c-mode
+  '(abbrev-mode yas-minor-mode flycheck-mode undo-tree-mode auto-complete-mode)
+  1982
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "c:/Users/JaeYong/Dropbox/emacs/init.el"
+  "init.el"
+  'emacs-lisp-mode
+  '(yas-minor-mode flycheck-mode undo-tree-mode auto-complete-mode)
+  10159
+  '(1732 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . prefer-utf-8-unix) (overwrite-mode))
+  '((mark-ring (1732))))
+
+(desktop-create-buffer 208
+  "c:/Users/JaeYong/Documents/School Work/ECE 391/ece391/work/mps/mp2/photo.h"
+  "photo.h"
+  'c-mode
+  '(abbrev-mode yas-minor-mode flycheck-mode undo-tree-mode auto-complete-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "c:/Users/JaeYong/Documents/School Work/ECE 391/ece391/work/mps/mp2/photo.c"
+  "photo.c"
+  'c-mode
+  '(abbrev-mode yas-minor-mode flycheck-mode undo-tree-mode auto-complete-mode)
+  15361
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "c:/Users/JaeYong/Documents/School Work/ECE 391/ece391/work/mps/mp2/photo_headers.h"
+  "photo_headers.h"
+  'c-mode
+  '(abbrev-mode yas-minor-mode flycheck-mode undo-tree-mode auto-complete-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "c:/Users/JaeYong/Documents/School Work/ECE 391/ece391/work/mps/mp2/text.c"
+  "text.c"
+  'c-mode
+  '(abbrev-mode yas-minor-mode flycheck-mode undo-tree-mode auto-complete-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "c:/Users/JaeYong/Documents/School Work/ECE 391/ece391/work/mps/mp2/text.h"
+  "text.h"
+  'c-mode
+  '(abbrev-mode yas-minor-mode flycheck-mode undo-tree-mode auto-complete-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "c:/Users/JaeYong/Documents/School Work/ECE 391/ece391/work/mps/mp2/todo.txt"
+  "todo.txt"
+  'text-mode
+  '(yas-minor-mode flycheck-mode undo-tree-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "c:/Users/JaeYong/Documents/School Work/ECE 391/ece391/work/mps/mp2/types.h"
+  "types.h"
+  'c-mode
+  '(abbrev-mode yas-minor-mode flycheck-mode undo-tree-mode auto-complete-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "c:/Users/JaeYong/Documents/School Work/ECE 391/ece391/work/mps/mp2/world.c"
+  "world.c"
+  'c-mode
+  '(abbrev-mode yas-minor-mode flycheck-mode undo-tree-mode auto-complete-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "c:/Users/JaeYong/Documents/School Work/ECE 391/ece391/work/mps/mp2/world.h"
+  "world.h"
+  'c-mode
+  '(abbrev-mode yas-minor-mode flycheck-mode undo-tree-mode auto-complete-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "c:/Users/JaeYong/Documents/School Work/ECE 391/ece391/work/mps/mp2/adventure.c"
+  "adventure.c"
+  'c-mode
+  '(abbrev-mode yas-minor-mode flycheck-mode undo-tree-mode auto-complete-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "c:/Users/JaeYong/Documents/School Work/ECE 391/ece391/work/mps/mp2/assert.c"
+  "assert.c"
+  'c-mode
+  '(abbrev-mode yas-minor-mode flycheck-mode undo-tree-mode auto-complete-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "c:/Users/JaeYong/Documents/School Work/ECE 391/ece391/work/mps/mp2/assert.h"
+  "assert.h"
+  'c-mode
+  '(abbrev-mode yas-minor-mode flycheck-mode undo-tree-mode auto-complete-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "c:/Users/JaeYong/Documents/School Work/ECE 391/ece391/work/mps/mp2/input.c"
+  "input.c"
+  'c-mode
+  '(abbrev-mode yas-minor-mode flycheck-mode undo-tree-mode auto-complete-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "c:/Users/JaeYong/Documents/School Work/ECE 391/ece391/work/mps/mp2/input.h"
+  "input.h"
+  'c-mode
+  '(abbrev-mode yas-minor-mode flycheck-mode undo-tree-mode auto-complete-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "c:/Users/JaeYong/Documents/School Work/ECE 391/ece391/work/mps/mp2/MODULE.txt"
+  "MODULE.txt"
+  'text-mode
+  '(yas-minor-mode flycheck-mode undo-tree-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "c:/Users/JaeYong/Documents/School Work/ECE 391/ece391/work/mps/mp2/mp2photo.c"
+  "mp2photo.c"
+  'c-mode
+  '(abbrev-mode yas-minor-mode flycheck-mode undo-tree-mode auto-complete-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (overwrite-mode))
+  '((mark-ring nil)))
+
