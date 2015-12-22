@@ -156,7 +156,7 @@
 (require 'evil)
 (require 'evil-leader)
 (evil-mode 1)
-(setq evil-want-C-u-scroll t)
+(define-key evil-normal-state-map (kbd "C-u") 'evil-scroll-up)
 (global-evil-leader-mode)
 (evil-leader/set-key
   "e" 'find-file
