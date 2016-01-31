@@ -1,0 +1,8 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: c-divider-comment
+# key: divider-comment
+# binding: direct-keybinding
+# --
+//----------------------------------------------------------------------------//
+//                             $1
+//----------------------------------------------------------------------------//

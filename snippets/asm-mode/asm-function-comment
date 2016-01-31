@@ -1,0 +1,20 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: asm-function-comment
+# key: function-comment
+# binding: direct-keybinding
+# --
+/*==============================================================================
+ * $1 
+ *
+ * @registers
+ *     Callee saved registers
+ *        %esi : $2 
+ *        %edi : $3
+ *        %ebx : $4
+ *     Caller saved registers
+ *        %eax : $5
+ *        %ecx : $6 
+ *        %edx : $7 
+ *
+ * @return     : $8 
+ =============================================================================*/

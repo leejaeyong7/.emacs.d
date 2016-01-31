@@ -1,0 +1,8 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: asm-divider-comment
+# key: divider-comment
+# binding: direct-keybinding
+# --
+//----------------------------------------------------------------------------//
+//                                $1 
+//----------------------------------------------------------------------------//
