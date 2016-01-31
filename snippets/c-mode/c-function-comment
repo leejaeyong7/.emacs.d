@@ -3,13 +3,9 @@
 # key: function-comment
 # binding: direct-keybinding
 # --
-
-/*
- * function    : $1
- * description : $2
- *
- * parameter   : $3
- *
- * return      : $4
- *
+/**
+ * $1
+ * @param $2
+ * @see $3
+ * @return $4
  */

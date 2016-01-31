@@ -13,6 +13,8 @@
 (if (eq system-type 'darwin)
     (global-set-key (kbd "<C-s-268632070>") 'toggle-frame-fullscreen) 
 )
+;; remove scroll bar
+(scroll-bar-mode -1)
 
 
 ;;------------------------------------------------------------------------------
@@ -110,8 +112,8 @@
 ;;------------------------------------------------------------------------------
 ;;asm-mode syntax
 ;;------------------------------------------------------------------------------
-(add-hook 'asm-mode-hook
-          (lambda () (interactive) (modify-syntax-entry ?# "< b")))
+;; (add-hook 'asm-mode-hook
+;;           (lambda () (interactive) (modify-syntax-entry ?# "< b")))
     
 ;;------------------------------------------------------------------------------
 ;;c-mode syntax
@@ -182,6 +184,7 @@
   "cv" 'evilnc-toggle-invert-comment-line-by-line
   "\\" 'evilnc-comment-operator ; if you prefer backslash key
 )
+(define-key evil-normal-state-map (kbd "C-w q") 'delete-window)
 
 (require 'evil-surround)
 (global-evil-surround-mode 1)
@@ -224,4 +227,4 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "gray17" :foreground "white" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 120 :width normal :foundry "unknown" :family "Inconsolata")))))
+ '(default ((t (:inherit nil :stipple nil :background "gray17" :foreground "white" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 160 :width normal :foundry "nil" :family "Inconsolata")))))

@@ -3,13 +3,12 @@
 # key: header-comment
 # binding: direct-keybinding
 # --
-
-/*===========================================================================
+/*==============================================================================
  *
  * @author     : Jae Yong Lee
  * @project    : $1
- * @file       : ${2:`(file-name-nondirectory (buffer-file-name))`}
- * @description: $3
+ * @file       : ${3:`(file-name-nondirectory (buffer-file-name))`}
+ * @description: $4
  *
- * Copyright (c) Jae Yong Lee / UIUC Fall 2015
-===========================================================================*/
+ * Copyright (c) Jae Yong Lee / UIUC Spring 2016
+ =============================================================================*/
