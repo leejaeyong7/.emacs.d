@@ -3,7 +3,6 @@
 # key: header-comment
 # binding: direct-keybinding
 # --
-
 /**
  * @author: Jae Yong Lee
  * @file: ${1:`(file-name-nondirectory (buffer-file-name))`}

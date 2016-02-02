@@ -2,6 +2,10 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/Users/jae/Documents/Work/reconstruct/flying-superintendents/viewer/nodeapp/" . "views/")
+ ("/Users/jae/Documents/Work/reconstruct/flying-superintendents/viewer/" . "nodeapp/")
+ ("/Users/jae/Documents/Work/reconstruct/flying-superintendents/" . "viewer/")
+ ("/Users/jae/Documents/Work/reconstruct/" . "flying-superintendents/")
  ("/Users/jae/Documents/$RECYCLE.BIN/" . ".prl_rec/")
  ("/Users/jae/Documents/Academics/Research/Joe/'15 Fall/3D_Renderer/" . "doc/")
  ("/Users/jae/Documents/Work/flying-superintendents/viewer/nodeapp/" . "views/")
@@ -15,17 +19,20 @@
  ("/Users/jae/" . "Documents/")
  ("/Users/jae/Documents/Work/flying-superintendents/viewer/" . "nodeapp/")
  ("/Users/jae/Documents/Work/flying-superintendents/" . "viewer/")
- ("/Users/jae/Documents/Work/" . "flying-superintendents/")
+ ("/Users/jae/Documents/Work/" . "reconstruct/")
  ("/Users/jae/Documents/Academics/CS446/hw2/decision-trees/" . "src/")
  ("/Users/jae/Documents/Academics/CS446/hw2/" . "decision-trees/")
  ("/Users/jae/Documents/Academics/CS446/" . "hw2/")
  ("/Users/jae/Documents/Academics/ECE391/" . "lectures/")
  ("/Users/jae/Documents/Academics/" . "Research/")
- ("/Users/jae/Documents/" . "Academics/")
+ ("/Users/jae/Documents/" . "Work/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
+ "/Users/jae/Documents/Work/reconstruct/flying-superintendents/viewer/nodeapp/views/"
+ "/Users/jae/Documents/Work/reconstruct/flying-superintendents/viewer/css/"
+ "/Users/jae/Documents/Work/ece391/work/mp1/"
  "/Users/jae/Documents/Academics/Research/Joe/'15 Fall/3D_Renderer/"
  "/Users/jae/Documents/Work/flying-superintendents/viewer/nodeapp/"
  "/Users/jae/Documents/Work/flying-superintendents/viewer/scripts/"
@@ -45,23 +52,49 @@
 
 ;; ----- ido-work-file-list -----
 (
+ "login.ejs"
+ "login.css"
+ "mp1_testcases.c"
+ "mp1.S"
  "simSensorDepthCamera.h"
  "makefile"
  "simSensorMonocularCamera.h"
  "package.json"
  "project.js"
- "login.css"
- "login.ejs"
  "project.ejs"
- "project.css"
- "simGUIEntityWindow.cpp"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/Users/jae/Documents/Academics/Research/Joe/SimEngine/" (22187 42801 0 0) "simSensorCamera.o" "simSensorCamera.h~" "simSensorCamera.h" "simSensorCamera.cpp~" "simSensorCamera.cpp" "simSensor.o" "simSensor.h" "simSensor.cpp~" "simSensor.cpp" "simPhysics.o" "simPhysics.h" "simPhysics.cpp" "simGUI.o" "simGUI.h" "simGUI.cpp" "simEntity.o" "simEntity.h" "simEntity.cpp" "simEngine.o" "simEngine.h" "simEngine.cpp" "Models/" "makefile" "main.out.app/" "main.o" "main.cpp" "font/" "eventHandler.o" "eventHandler.h" "eventHandler.cpp" "doc/" ".gitignore" ".git/" ".eventHandler.cpp.swp" ".DS_Store" "../" "./")
+ ("/Users/jae/Documents/ece391/ps1/" (22190 35047 0 0) "question2.c" "question1.asm" "../" "./")
 
- ("/Users/jae/" (22187 42226 0 0) "Public/" "Pictures/" "OneDrive/" "nltk_data/" "Music/" "Movies/" "Library/" "gtk/" "Google 드라이브/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "Applications (Parallels)/" "Applications/" ".Xauthority" ".vscode/" ".vimrc.swp" ".vimrc" ".viminfo" ".vim/" ".v8flags.3.14.5.9.jae.json" ".Trash/" ".thumbnails/" ".subversion/" ".ssh/" ".spacemacs" ".sh_history" ".profile" ".oracle_jre_usage/" ".npm/" ".node-gyp/" ".mysql_history" ".mono/" ".mongorc.js" ".mcrCache8.4/" ".matplotlib/" ".matlab/" ".local/" ".lesshst" ".JIRAClient/" ".jhbuildrc-fw-10.4-test" ".jhbuildrc-fw-10.4" ".jhbuildrc-custom" ".jhbuildrc-cfw-10.4u" ".jhbuildrc-cfw-10.4" ".jhbuildrc" ".hgignore_global" ".gitignore_global" ".gitconfig" ".ghc/" ".emacs.d2/" ".emacs.d/" ".DS_Store" ".dropbox/" ".dbshell" ".cups/" ".config/" ".codeintel/" ".CFUserTextEncoding" ".cache/" ".cabal/" ".bash_sessions/" ".bash_profile~" ".bash_profile.macports-saved_2015-07-31_at_15:32:23" ".bash_profile" ".bash_history" ".anyconnect" ".android/" "../" "./")
+ ("/Users/jae/Documents/Work/reconstruct/flying-superintendents/viewer/nodeapp/views/" (22191 49457 0 0) "viewer.ejs" "tree.ejs" "signup.ejs" "schedule.ejs" "projectCards.ejs" "project.ejs" "profile.ejs" "pointcloud-viewer.ejs" "personnelCards.ejs" "navbar.ejs" "main.ejs" "login.ejs" "index.ejs" ".DS_Store" "../" "./")
+
+ ("/Users/jae/Documents/Work/reconstruct/flying-superintendents/viewer/nodeapp/" (22191 49457 0 0) "views/" "server.js" "routes.js" "passport.js" "package.json" "node_modules/" "models/" "gulpfile.js" "aws.config" "app/" ".gitignore" ".DS_Store" "../" "./")
+
+ ("/Users/jae/Documents/Work/reconstruct/flying-superintendents/viewer/css/" (22191 54729 0 0) "third_party/" "style.css" "project.css" "navbar.css" "main.css" "main-owner.css" "main-commons.css" "login.css" ".DS_Store" "../" "./")
+
+ ("/Users/jae/Documents/Work/reconstruct/flying-superintendents/viewer/" (22191 47522 0 0) "venv/" "testa/" "scripts/" "run_node.sh" "resources/" "pointclouds/" "organizations/" "nodeapp/" "models/" "html/" "flaskapp/" "download-resources.sh" "download-resources-win.sh" "css/" "assets/" ".gitignore" ".DS_Store" "../" "./")
+
+ ("/Users/jae/Documents/Work/reconstruct/flying-superintendents/" (22191 47522 0 0) "web.config" "viewer/" "tools/" "styleguides/" "README.md" "PotreeConverter/" "pnp-solver/" "openMVG_src_PBA/" "openMVG_gpu/" "openMVG/" "notes/" "misc/" "docs/" "aws-credentials/" ".gitignore" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/jae/Documents/Work/reconstruct/" (22189 6547 0 0) "reports/" "prototype.pdf" "others/" "flying-superintendents/" "demofiles/" ".DS_Store" "../" "./")
+
+ ("/Users/jae/Documents/" (22190 35224 0 0) "Work/" "Virtual Machines.localized/" "test/" "Personnal/" "Parallels/" "Old/" "Living/" "ece391.zip" "ece391/" "Dev/" "desktop.ini" "backup/" "Academics/" ".parallels-vm-directory/" ".localized" ".DS_Store" "$RECYCLE.BIN/" "../" "./")
+
+ ("/Users/jae/Documents/Academics/" (22191 44650 0 0) "University/" "Research/" "ETC/" ".DS_Store" "../" "./")
+
+ ("/Users/jae/Documents/Academics/Research/Joe/SimEngine/" (22191 47388 0 0) "simSensorCamera.o" "simSensorCamera.h~" "simSensorCamera.h" "simSensorCamera.cpp~" "simSensorCamera.cpp" "simSensor.o" "simSensor.h" "simSensor.cpp~" "simSensor.cpp" "simRobot.o" "simRobot.h~" "simRobot.h" "simRobot.cpp~" "simRobot.cpp" "simPhysics.o" "simPhysics.h" "simPhysics.cpp" "simGUI.o" "simGUI.h" "simGUI.cpp" "simEntity.o" "simEntity.h" "simEntity.cpp" "simEngine.o" "simEngine.h" "simEngine.cpp" "Models/" "makefile" "main.out.app/" "main.out" "main.o" "main.cpp" "irr.app/" "font/" "eventHandler.o" "eventHandler.h" "eventHandler.cpp" "enumerations.h~" "enumerations.h.gch" "enumerations.h" "doc/" ".gitignore" ".git/" ".DS_Store" ".#simGUI.h" "#simSensor.h#" "#simGUI.h#" "../" "./")
+
+ ("/Users/jae/Documents/Work/ece391/work/mp1/" (22191 30514 0 0) "utest" "mp1_userspace.o" "mp1_userspace.h" "mp1_userspace.c" "mp1_u.o" "mp1_testcases_u.o" "mp1_testcases.o" "mp1_testcases.c" "mp1.S" "mp1.h" "mp1.diff" "Makefile" "ktest" "frame1.txt" "frame0.txt" ".svn/" "#mp1.S#" "../" "./")
+
+ ("/Users/jae/Documents/Work/ece391/work/" (22190 31899 0 0) "vm/" "source/" "repos/" "mp1/" ".DS_Store" ".com.apple.timemachine.supported" "../" "./")
+
+ ("/Users/jae/Documents/Work/ece391/" (22190 31070 0 0) "work/" "SMBUp.app/" "SMBUp.1.4.1.zip" "setup_win.bat" "setup_ubuntu" "setup_scripts_win/" "setup_mac" "README.txt" "qemu_win/" "qemu_mac/" "image/" ".DS_Store" "../" "./")
+
+ ("/Users/jae/Documents/Work/" (22189 6607 0 0) "reconstruct/" "ece391.tar.gz" "ece391/" ".DS_Store" "../" "./")
+
+ ("/Users/jae/" (22190 25011 0 0) "Public/" "Pictures/" "OneDrive/" "nltk_data/" "Music/" "Movies/" "Library/" "gtk/" "Google 드라이브/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "Applications (Parallels)/" "Applications/" ".Xauthority" ".vscode/" ".vimrc" ".viminfo" ".vim/" ".v8flags.3.14.5.9.jae.json" ".Trash/" ".thumbnails/" ".subversion/" ".ssh/" ".spacemacs" ".sh_history" ".profile" ".oracle_jre_usage/" ".npm/" ".node-gyp/" ".mysql_history" ".mono/" ".mongorc.js" ".mcrCache8.4/" ".matplotlib/" ".matlab/" ".local/" ".lesshst" ".JIRAClient/" ".jhbuildrc-fw-10.4-test" ".jhbuildrc-fw-10.4" ".jhbuildrc-custom" ".jhbuildrc-cfw-10.4u" ".jhbuildrc-cfw-10.4" ".jhbuildrc" ".hgignore_global" ".gitignore_global" ".gitconfig" ".ghc/" ".emacs.d2/" ".emacs.d/" ".DS_Store" ".dropbox/" ".dbshell" ".cups/" ".config/" ".codeintel/" ".CFUserTextEncoding" ".cache/" ".cabal/" ".bash_sessions/" ".bash_profile~" ".bash_profile.macports-saved_2015-07-31_at_15:32:23" ".bash_profile" ".bash_history" ".anyconnect" ".android/" "../" "./")
 
  ("/Users/jae/Documents/Academics/Research/Joe/" (22186 16830 0 0) "svn/" "SimEngine/" ".DS_Store" "'15 Spring/" "'15 Fall/" "'14 Spring/" "'14 Fall/" "'13 Spring/" "../" "./")
 
@@ -76,8 +109,6 @@
  ("/Users/jae/Documents/Work/flying-superintendents/viewer/nodeapp/views/" (22184 2214 0 0) "viewer.ejs" "tree.ejs" "signup.ejs" "schedule.ejs" "projectCards.ejs" "project.ejs" "profile.ejs" "pointcloud-viewer.ejs" "personnelCards.ejs" "navbar.ejs" "main.ejs" "login.ejs" "index.ejs" ".DS_Store" "../" "./")
 
  ("/Users/jae/Documents/Work/flying-superintendents/viewer/css/" (22183 53505 0 0) "third_party/" "style.css" "project.css" "navbar.css" "main.css" "main-owner.css" "main-commons.css" "login.css" ".DS_Store" "../" "./")
-
- ("/Users/jae/Documents/" (22183 59623 0 0) "Work/" "Virtual Machines.localized/" "test/" "Personnal/" "Parallels/" "Old/" "Living/" "Dev/" "desktop.ini" "backup/" "Academics/" ".parallels-vm-directory/" ".localized" ".DS_Store" "$RECYCLE.BIN/" "../" "./")
 
  ("/Users/jae/Documents/Work/flying-superintendents/viewer/scripts/" (22184 2829 0 0) "toggler.js" "third_party/" "save-model-image.js" "registration.js" "registration-controls.js" "project.js~" "project.js" "project-iterator.js" "point-selector.js" "point-selector-image.js" "modal.js" "main-owner.js" "login.js" "hd4ar/" "gui.js" "globals.js" "deprecated/" "camera.js" "camera-loader.js" ".DS_Store" "#project.js#" "../" "./")
 
@@ -97,13 +128,9 @@
 
  ("/Users/jae/Documents/Work/flying-superintendents/" (22164 29477 0 0) "web.config" "viewer/" "tools/" "styleguides/" "README.md" "PotreeConverter/" "pnp-solver/" "openMVG_src_PBA/" "openMVG_gpu/" "openMVG/" "notes/" "misc/" "docs/" ".gitignore" ".git/" ".DS_Store" "../" "./")
 
- ("/Users/jae/Documents/Work/" (22129 5579 0 0) "reports/" "prototype.pdf" "others/" "flying-superintendents/" "demofiles/" ".DS_Store" "../" "./")
-
  ("/Users/jae/Documents/Academics/Research/Joe/'15 Fall/3D library/" (22133 18675 0 0) "makefile" "main.out" "main.cpp" "3d libraries.pdf" "3d libraries.docx" "../" "./")
 
  ("/Users/jae/Documents/Academics/Research/" (22129 1827 0 0) "longle/" "Joe/" ".DS_Store" "../" "./")
-
- ("/Users/jae/Documents/Academics/" (22129 10826 0 0) "University/" "Research/" "ETC/" ".DS_Store" "../" "./")
 
  ("/Users/jae/.emacs.d/" (22134 23220 0 0) "url/" "tramp" "snippets/" "server-0.xkb" "semanticdb/" "recentf~" "recentf" "projectile-bookmarks.eld" "misc/" "lisp/" "irony/" "init.el~" "init.el" "init-el-old" "ido.last~" "ido.last" "elpa/" "ede-projects.el" "bookmarks" "auto-save-list/" "ac-comphist.dat" ".mc-lists.el" ".gitignore" ".git/" ".emacs.desktop" ".DS_Store" ".#init.el" "#init.el#" "../" "./")
 
