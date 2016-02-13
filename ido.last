@@ -26,6 +26,7 @@
 
 ;; ----- ido-work-directory-list -----
 (
+ "c:/Users/JaeYong/Documents/Work/ece391/work/mp1/"
  "/Users/jae/Documents/Academics/Research/Joe/'15 Fall/3D_Renderer/"
  "/Users/jae/Documents/Work/flying-superintendents/viewer/nodeapp/"
  "/Users/jae/Documents/Work/flying-superintendents/viewer/scripts/"
@@ -45,6 +46,7 @@
 
 ;; ----- ido-work-file-list -----
 (
+ "mp1_testcases.c"
  "simSensorDepthCamera.h"
  "makefile"
  "simSensorMonocularCamera.h"
@@ -54,11 +56,14 @@
  "login.ejs"
  "project.ejs"
  "project.css"
- "simGUIEntityWindow.cpp"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("c:/Users/JaeYong/Documents/Work/ece391/work/mp1/" (22191 59527 0 0) "utest" "mp1_userspace.o" "mp1_userspace.h" "mp1_userspace.c" "mp1_u.o" "mp1_testcases_u.o" "mp1_testcases.o" "mp1_testcases.c~" "mp1_testcases.c" "mp1.S~" "mp1.S" "mp1.h" "mp1.diff" "Makefile" "ktest" "frame1.txt" "frame0.txt" ".svn/" "../" "./")
+
+ ("c:/Users/JaeYong/" (22188 489 0 0) "_viminfo" "VirtualBox VMs/" "Videos/" "Templates/" "Start Menu/" "SendTo/" "Searches/" "Saved Games/" "Recent/" "PrintHood/" "Pictures/" "ntuser.ini" "NTUSER.DAT{9701cf45-a064-11e5-86c5-a316c48ac6a7}.TMContainer00000000000000000002.regtrans-ms" "NTUSER.DAT{9701cf45-a064-11e5-86c5-a316c48ac6a7}.TMContainer00000000000000000001.regtrans-ms" "NTUSER.DAT{9701cf45-a064-11e5-86c5-a316c48ac6a7}.TM.blf" "NTUSER.DAT{9701cf44-a064-11e5-86c5-a316c48ac6a7}.TxR.blf" "NTUSER.DAT{9701cf44-a064-11e5-86c5-a316c48ac6a7}.TxR.2.regtrans-ms" "NTUSER.DAT{9701cf44-a064-11e5-86c5-a316c48ac6a7}.TxR.1.regtrans-ms" "NTUSER.DAT{9701cf44-a064-11e5-86c5-a316c48ac6a7}.TxR.0.regtrans-ms" "ntuser.dat.LOG2" "ntuser.dat.LOG1" "NTUSER.DAT" "NetHood/" "My Documents/" "Music/" "Local Settings/" "Links/" "iCloudDrive/" "Favorites/" "Downloads/" "Documents/" "Desktop/" "create_ap/" "Cookies/" "Contacts/" "Application Data/" "AppData/" "3D Objects/" ".vscode/" ".VirtualBox/" ".ssh/" ".oracle_jre_usage/" ".node_repl_history" ".node-gyp/" ".mongorc.js" ".gitconfig" ".git-credentials" ".codeintel/" ".atom/" ".android/" "../" "./")
+
  ("/Users/jae/Documents/Academics/Research/Joe/SimEngine/" (22187 42801 0 0) "simSensorCamera.o" "simSensorCamera.h~" "simSensorCamera.h" "simSensorCamera.cpp~" "simSensorCamera.cpp" "simSensor.o" "simSensor.h" "simSensor.cpp~" "simSensor.cpp" "simPhysics.o" "simPhysics.h" "simPhysics.cpp" "simGUI.o" "simGUI.h" "simGUI.cpp" "simEntity.o" "simEntity.h" "simEntity.cpp" "simEngine.o" "simEngine.h" "simEngine.cpp" "Models/" "makefile" "main.out.app/" "main.o" "main.cpp" "font/" "eventHandler.o" "eventHandler.h" "eventHandler.cpp" "doc/" ".gitignore" ".git/" ".eventHandler.cpp.swp" ".DS_Store" "../" "./")
 
  ("/Users/jae/" (22187 42226 0 0) "Public/" "Pictures/" "OneDrive/" "nltk_data/" "Music/" "Movies/" "Library/" "gtk/" "Google 드라이브/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "Applications (Parallels)/" "Applications/" ".Xauthority" ".vscode/" ".vimrc.swp" ".vimrc" ".viminfo" ".vim/" ".v8flags.3.14.5.9.jae.json" ".Trash/" ".thumbnails/" ".subversion/" ".ssh/" ".spacemacs" ".sh_history" ".profile" ".oracle_jre_usage/" ".npm/" ".node-gyp/" ".mysql_history" ".mono/" ".mongorc.js" ".mcrCache8.4/" ".matplotlib/" ".matlab/" ".local/" ".lesshst" ".JIRAClient/" ".jhbuildrc-fw-10.4-test" ".jhbuildrc-fw-10.4" ".jhbuildrc-custom" ".jhbuildrc-cfw-10.4u" ".jhbuildrc-cfw-10.4" ".jhbuildrc" ".hgignore_global" ".gitignore_global" ".gitconfig" ".ghc/" ".emacs.d2/" ".emacs.d/" ".DS_Store" ".dropbox/" ".dbshell" ".cups/" ".config/" ".codeintel/" ".CFUserTextEncoding" ".cache/" ".cabal/" ".bash_sessions/" ".bash_profile~" ".bash_profile.macports-saved_2015-07-31_at_15:32:23" ".bash_profile" ".bash_history" ".anyconnect" ".android/" "../" "./")
@@ -118,8 +123,6 @@
  ("c:/Users/JaeYong/Documents/Work/flying-superintendents/viewer/" (22073 5449 0 0) "venv/" "scripts/" "run_script.sh" "run_script.bat" "run.py" "resources/" "requirements.txt" "README.md" "organizations/" "html/" "flaskapp/" "download-resources.sh" "css/" ".gitignore" "../" "./")
 
  ("c:/Users/JaeYong/Documents/Work/flying-superintendents/viewer/html/" (22073 16676 0 0) "tree.html" "tools.html" "schedule.html" "request-sent.html" "project.html" "project-iterator.html" "pointcloud-viewer.html" "main-worker.html" "main-supervisor.html" "main-owner.html" "login.html" "correspondence-selector.html" "bim-loader.html" "base.html" "admin.html" "../" "./")
-
- ("c:/Users/JaeYong/" (22073 16768 0 0) "_viminfo" "Videos/" "Templates/" "Start Menu/" "SendTo/" "Searches/" "Saved Games/" "Recent/" "PrintHood/" "Pictures/" "OneDrive/" "ntuser.ini" "NTUSER.DAT{77a2c7ed-26f0-11e5-80da-e41d2d741090}.TMContainer00000000000000000002.regtrans-ms" "NTUSER.DAT{77a2c7ed-26f0-11e5-80da-e41d2d741090}.TMContainer00000000000000000001.regtrans-ms" "NTUSER.DAT{77a2c7ed-26f0-11e5-80da-e41d2d741090}.TM.blf" "ntuser.dat.LOG2" "ntuser.dat.LOG1" "NTUSER.DAT" "NetHood/" "My Documents/" "Music/" "Local Settings/" "Links/" "iCloudDrive/" "Google Drive/" "Favorites/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "create_ap/" "Cookies/" "Contacts/" "Application Data/" "AppData/" "3D Objects/" ".vscode/" ".ssh/" ".oracle_jre_usage/" ".node-gyp/" ".gitconfig" ".codeintel/" ".atom/" "../" "./")
 
  ("/Users/" (22053 38473 0 0) "Shared/" "jae/" "Guest/" ".localized" "../" "./")
 
