@@ -1,0 +1,8 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: js-function-description
+# key: function-description
+# binding: direct-keybinding
+# --
+/**
+ * $1
+ */
