@@ -6,15 +6,18 @@
 
 ;; if window system remove toolbar
 (if window-system
-    (tool-bar-mode -1))
+    (progn
+    ;; remove scroll bar
+    (scroll-bar-mode -1)
+    (tool-bar-mode -1)))
 ;; remove menu bar
 (menu-bar-mode -1)
 (column-number-mode 1)
 (if (eq system-type 'darwin)
     (global-set-key (kbd "<C-s-268632070>") 'toggle-frame-fullscreen) 
 )
-;; remove scroll bar
-(scroll-bar-mode -1)
+
+
 
 
 ;;------------------------------------------------------------------------------
@@ -139,6 +142,12 @@
 ;;------------------------------------------------------------------------------
 (require 'neotree)
 (global-set-key [f8] 'neotree-toggle)
+(add-hook 'neotree-mode-hook
+    (lambda ()
+        (define-key evil-normal-state-local-map (kbd "TAB") 'neotree-enter)
+        (define-key evil-normal-state-local-map (kbd "SPC") 'neotree-enter)
+        (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide)
+        (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)))
 (setq projectile-switch-project-action 'neotree-projectile-action)
     
 ;;------------------------------------------------------------------------------
