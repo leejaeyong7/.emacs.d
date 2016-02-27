@@ -1,0 +1,52 @@
+;; Object Physics/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Physics/"
+  :tables
+  (list
+    (semanticdb-table "simPhysics.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("simPhysics.h" include nil nil [1 24])
+            ("SimPhysics" function
+               (:constructor-flag t
+                :parent "SimPhysics"
+                :type ("SimPhysics" type (:type "class") nil nil))
+                nil [26 65]))          
+      :file "simPhysics.cpp"
+      :pointmax 65
+      :fsize 64
+      :lastmodtime '(22214 38240 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "simPhysics.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_SIM_PHYSICS_H_" variable (:constant-flag t) nil [546 561])
+            ("vector" include (:system-flag t) nil [771 788])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [999 1019])
+            ("SimPhysics" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1467 1474])
+                    ("SimPhysics" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("SimPhysics" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1479 1492])
+                    ("private" label nil (reparse-symbol classsubparts) [1493 1501])
+                    ("test" variable (:type "int") (reparse-symbol classsubparts) [1506 1515]))                  
+                :type "class")
+                nil [1448 1518]))          
+      :file "simPhysics.h"
+      :pointmax 1526
+      :fsize 1525
+      :lastmodtime '(22214 38240 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_SIM_PHYSICS_H_")
+          )
+))
+  :file "!home!jae!Dev!SimEngine!Engine!Physics!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

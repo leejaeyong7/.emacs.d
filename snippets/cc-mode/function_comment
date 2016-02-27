@@ -1,0 +1,14 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: function-comment
+# key: fc
+# binding: direct-keybinding
+# --
+/**
+ * @brief ${1:function description}
+ ${2:*
+ *  ${3:Detailed description}
+ *
+ }* @param $4
+ * @see $5
+ * @return $6
+ */

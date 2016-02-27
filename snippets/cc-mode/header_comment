@@ -1,0 +1,14 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: header-comment
+# key: hc
+# binding: direct-keybinding
+# --
+/*============================================================================
+ * @author     : Jae Yong Lee (leejaeyong7@gmail.com)
+ * @file       : ${1:`(file-name-nondirectory (buffer-file-name))`}
+ * @brief      : $2
+ ${3:*
+ *  ${4:Detailed description}
+ *
+}* Copyright (c) Jae Yong Lee / UIUC Spring 2016
+ =============================================================================*/
