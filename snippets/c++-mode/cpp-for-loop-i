@@ -1,0 +1,9 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: cpp-for-loop-i
+# key: for-s
+# binding: direct-keybinding
+# --
+for(int i = $1 ; i < $2 ; i++)
+{
+    $3
+}

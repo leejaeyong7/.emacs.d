@@ -9,8 +9,11 @@
 ;;------------------------------------------------------------------------------
 ;;    Emacs Default Skin
 ;;------------------------------------------------------------------------------
-(scroll-bar-mode -1)
-(tool-bar-mode -1)
+(if window-system
+    (progn
+      ;; remove scroll bar
+      (scroll-bar-mode -1)
+          (tool-bar-mode -1)))
 (menu-bar-mode -1)
 (column-number-mode 1)
 
@@ -36,41 +39,27 @@
 ;;
 ;;------------------------------------------------------------------------------
 ;;------------------------------------------------------------------------------
+;;exec-path
+;;------------------------------------------------------------------------------
+(when (eq system-type 'darwin) (exec-path-from-shell-initialize))
+;;------------------------------------------------------------------------------
 ;;company mode
 ;;------------------------------------------------------------------------------
 (use-package company
   :init
   (add-hook 'after-init-hook 'global-company-mode)
-  )
-  ;; (use-package company-c-headers
-  ;;   :config
-  ;;   (add-to-list 'company-backends 'company-c-headers)))
+  :config
+  (if (eq system-type 'darwin)
+      (add-to-list 'company-backends 'company-rtags )))
 ;;------------------------------------------------------------------------------
 ;;helm mode
 ;;------------------------------------------------------------------------------
 (use-package helm
   :init
   (helm-mode 1)
-  (use-package helm-gtags
-    :init
-    (add-hook 'c-mode-hook 'helm-gtags-mode)
-    (add-hook 'c++-mode-hook 'helm-gtags-mode)
-    (add-hook 'asm-mode-hook 'helm-gtags-mode)
-    (eval-after-load "helm-gtags"
-      '(progn
-         (define-key helm-gtags-mode-map (kbd "M-t") 'helm-gtags-find-tag)
-         (define-key helm-gtags-mode-map (kbd "M-r") 'helm-gtags-find-rtag)
-         (define-key helm-gtags-mode-map (kbd "M-s") 'helm-gtags-find-symbol)
-         (define-key helm-gtags-mode-map (kbd "M-g M-p") 'helm-gtags-parse-file)
-         (define-key helm-gtags-mode-map (kbd "C-c <") 'helm-gtags-previous-history)
-         (define-key helm-gtags-mode-map (kbd "C-c >") 'helm-gtags-next-history)
-         (local-unset-key (kbd "M-."))
-         (define-key helm-gtags-mode-map (kbd "M-.") 'helm-gtags-dwim)
-         (define-key helm-gtags-mode-map (kbd "M-.") 'helm-gtags-dwim)
-         (define-key helm-gtags-mode-map (kbd "M-,") 'helm-gtags-pop-stack))))
   :config
   (setq helm-split-window-in-side-p           t
-        helm-move-to-line-cycle-in-source     t
+        ;helm-move-to-line-cycle-in-source     t
         helm-ff-search-library-in-sexp        t )
   (global-set-key (kbd "M-x") 'helm-M-x))
 
@@ -81,28 +70,45 @@
   :init
   (global-flycheck-mode 1)
   :config
-  (add-hook 'c-mode-common-hook
-            (lambda () (if (derived-mode-p 'c-mode 'c++-mode)
-                            (flycheck-select-checker 'c/c++-gcc)))))
+  (when (eq system-type 'gnu/linux)
+    (add-hook 'c-mode-common-hook
+              (lambda () (if (derived-mode-p 'c-mode 'c++-mode)
+                             (flycheck-select-checker 'c/c++-gcc))))))
+
 
 ;;------------------------------------------------------------------------------
 ;;cpputil mode(for cmake)
 ;;------------------------------------------------------------------------------
-(use-package cpputils-cmake
-  :init
-  (add-hook 'c-mode-common-hook
-            (lambda () (if (derived-mode-p 'c-mode 'c++-mode)
-                           (cppcm-reload-all))))
-  :config
-  
-  (add-hook 'cppcm-reload-all-hook
-            (lambda () (setq
-                        flycheck-gcc-include-path
-                        flycheck-clang-include-path)))
-   )
-;; OPTIONAL, avoid typing full path when starting gdb
-;; (global-set-key (kbd "C-c C-g")
-;;  '(lambda ()(interactive) (gud-gdb (concat "gdb --fullname " (cppcm-get-exe-path-current-buffer)))))
+
+(if (eq system-type 'darwin)
+    (progn
+      (use-package rtags
+        :init
+        (setq rtags-autostart-diagnostics t)
+        (rtags-diagnostics)
+        (setq rtags-completions-enabled t)
+        :config
+        (define-key c-mode-base-map (kbd "M-n") 'rtags-find-symbol-at-point)
+        (define-key c-mode-base-map (kbd "M-,") 'rtags-find-references-at-point)
+        (define-key c-mode-base-map (kbd "M-t") 'rtags-find-file)
+        (define-key c-mode-base-map (kbd "M-s") 'rtags-find-symbol)
+        (define-key c-mode-base-map (kbd "M-r") 'rtags-find-references)
+        (define-key c-mode-base-map (kbd "C-<") 'rtags-find-virtuals-at-point)
+        (use-package cmake-ide
+          :config
+          (cmake-ide-setup)))
+
+      (use-package cpputils-cmake
+        :init
+        (add-hook 'c-mode-common-hook
+                  (lambda () (if (derived-mode-p 'c-mode 'c++-mode)
+                                 (cppcm-reload-all))))
+        :config
+        (add-hook 'cppcm-reload-all-hook
+                  (lambda () (setq
+                              flycheck-gcc-include-path
+                              flycheck-clang-include-path))))
+      ))
 ;;------------------------------------------------------------------------------
 ;;emmet mode
 ;;------------------------------------------------------------------------------
@@ -126,16 +132,6 @@
     (setq yas-snippet-dirs '("~/.emacs.d/snippets"))
     (yas-global-mode 1))
 
-;;------------------------------------------------------------------------------
-;;neotree mode
-;;------------------------------------------------------------------------------
-(use-package semantic
-  :init
-  :config
-  (global-semanticdb-minor-mode 1)
-  (global-semantic-idle-scheduler-mode 1)
-  (semantic-mode 1)
-  )
 ;;------------------------------------------------------------------------------
 ;;neotree mode
 ;;------------------------------------------------------------------------------
@@ -234,29 +230,6 @@
 (global-unset-key (kbd "C-x C-b"))
 (global-set-key (kbd "C-x C-b")(lambda () (interactive) (ibuffer t)))
 
-
-;; (setq package-list '(emmet-mode
-;;                      org
-;;                      yasnippet
-;;                      neotree
-;;                      flx-ido
-;;                      writeroom-mode
-;;                      evil
-;;                      evil-nerd-commenter
-;;                      evil-leader
-;;                      evil-surround
-;;                      use-package
-;;                      ))
-
-;; (setq debug-on-error t)
-;fetch the list of packages available
-;; (unless package-archive-contents
-;;   (package-refresh-contents))
-
-;; ; install the missing packages
-;; (dolist (package package-list)
-;;   (unless (package-installed-p package)
-;;     (package-install package)))
 ;;------------------------------------------------------------------------------
 
 (setq-default indent-tabs-mode nil)
@@ -277,4 +250,4 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "gray17" :foreground "white" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 110 :width normal :foundry "unknown" :family "Inconsolata")))))
+ '(default ((t (:inherit nil :stipple nil :background "gray17" :foreground "white" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 150 :width normal :foundry "nil" :family "Inconsolata")))))
