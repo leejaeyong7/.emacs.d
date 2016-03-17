@@ -6,8 +6,9 @@
 ;;
 ;;
 ;;; Code:
+
 ;;------------------------------------------------------------------------------
-;;    Emacs Default Skin
+;;    Emacs Default modes
 ;;------------------------------------------------------------------------------
 (if window-system
     (progn
@@ -16,17 +17,17 @@
           (tool-bar-mode -1)))
 (menu-bar-mode -1)
 (column-number-mode 1)
+(show-paren-mode 1)
 
 ;; full screen
 (if (eq system-type 'darwin)
     (global-set-key (kbd "<C-s-268632070>") 'toggle-frame-fullscreen) 
-    (global-set-key (kbd "C-S-f") 'toggle-frame-fullscreen) 
-)
+    (global-set-key (kbd "C-S-f") 'toggle-frame-fullscreen))
+
 ;;------------------------------------------------------------------------------
 ;;    Package list setup
 ;;------------------------------------------------------------------------------
 (require 'package)
-
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
 (when (< emacs-major-version 24)
@@ -42,15 +43,14 @@
 ;;exec-path
 ;;------------------------------------------------------------------------------
 (when (eq system-type 'darwin) (exec-path-from-shell-initialize))
+
 ;;------------------------------------------------------------------------------
-;;company mode
+;; magit settings
 ;;------------------------------------------------------------------------------
-(use-package company
+(use-package magit
   :init
-  (add-hook 'after-init-hook 'global-company-mode)
-  :config
-  (if (eq system-type 'darwin)
-      (add-to-list 'company-backends 'company-rtags )))
+  (global-set-key (kbd "C-x g") 'magit-status))
+
 ;;------------------------------------------------------------------------------
 ;;helm mode
 ;;------------------------------------------------------------------------------
@@ -66,49 +66,20 @@
 ;;------------------------------------------------------------------------------
 ;;flycheck
 ;;------------------------------------------------------------------------------
-(use-package flycheck
-  :init
-  (global-flycheck-mode 1)
-  :config
-  (when (eq system-type 'gnu/linux)
-    (add-hook 'c-mode-common-hook
-              (lambda () (if (derived-mode-p 'c-mode 'c++-mode)
-                             (flycheck-select-checker 'c/c++-gcc))))))
-
-
+;; (use-package flycheck
+;;   :init
+;;   (global-flycheck-mode 1)
+;;   :config
+;;   (when (eq system-type 'gnu/linux)
+;;     (add-hook 'c-mode-common-hook
+;;               (lambda () (if (derived-mode-p 'c-mode 'c++-mode)
+;;                              (flycheck-select-checker 'c/c++-gcc))))))
 ;;------------------------------------------------------------------------------
-;;cpputil mode(for cmake)
+;;key chords
 ;;------------------------------------------------------------------------------
-
-(if (eq system-type 'darwin)
-    (progn
-      (use-package rtags
-        :init
-        (setq rtags-autostart-diagnostics t)
-        (rtags-diagnostics)
-        (setq rtags-completions-enabled t)
-        :config
-        (define-key c-mode-base-map (kbd "M-n") 'rtags-find-symbol-at-point)
-        (define-key c-mode-base-map (kbd "M-,") 'rtags-find-references-at-point)
-        (define-key c-mode-base-map (kbd "M-t") 'rtags-find-file)
-        (define-key c-mode-base-map (kbd "M-s") 'rtags-find-symbol)
-        (define-key c-mode-base-map (kbd "M-r") 'rtags-find-references)
-        (define-key c-mode-base-map (kbd "C-<") 'rtags-find-virtuals-at-point)
-        (use-package cmake-ide
-          :config
-          (cmake-ide-setup)))
-
-      (use-package cpputils-cmake
-        :init
-        (add-hook 'c-mode-common-hook
-                  (lambda () (if (derived-mode-p 'c-mode 'c++-mode)
-                                 (cppcm-reload-all))))
-        :config
-        (add-hook 'cppcm-reload-all-hook
-                  (lambda () (setq
-                              flycheck-gcc-include-path
-                              flycheck-clang-include-path))))
-      ))
+;; (use-package key-chord
+;;   :init
+;;   (key-chord-mode 1)
 ;;------------------------------------------------------------------------------
 ;;emmet mode
 ;;------------------------------------------------------------------------------
@@ -132,21 +103,6 @@
     (setq yas-snippet-dirs '("~/.emacs.d/snippets"))
     (yas-global-mode 1))
 
-;;------------------------------------------------------------------------------
-;;neotree mode
-;;------------------------------------------------------------------------------
-(use-package neotree
-    :config
-    (global-set-key [f8] 'neotree-toggle))
-    (add-hook 'neotree-mode-hook (lambda ()
-        (define-key evil-normal-state-local-map (kbd "TAB") 'neotree-enter)
-        (define-key evil-normal-state-local-map (kbd "SPC") 'neotree-enter)
-        (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide)
-        (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)))
-
-;;------------------------------------------------------------------------------
-;;evil-mode emulation
-;;------------------------------------------------------------------------------
 
 (use-package evil
     :init
@@ -160,7 +116,8 @@
         "k" 'kill-buffer)    
         (evil-leader/set-leader "<SPC>")
         (use-package evil-nerd-commenter
-            :config
+          :init
+          :config
             (evil-leader/set-key
             "ci" 'evilnc-comment-or-uncomment-lines
             "cl" 'evilnc-quick-comment-or-uncomment-to-the-line
@@ -195,13 +152,7 @@
   (key-chord-define evil-insert-state-map "jk" 'evil-normal-state)
   (key-chord-define evil-replace-state-map "jk" 'evil-normal-state))
 
-;;------------------------------------------------------------------------------
-;; Write room mode
-;;------------------------------------------------------------------------------
-(use-package writeroom-mode
-  :config
-  (global-unset-key (kbd "C-x C-w"))
-  (global-set-key (kbd "C-x C-w") 'writeroom-mode))
+
 ;;------------------------------------------------------------------------------
 ;;
 ;;    Syntax / Key bindings
@@ -221,6 +172,8 @@
     (setq c-basic-offset 4))
 (add-hook 'c-mode-hook 'my-cc-mode-hook)
 (add-hook 'c++-mode-hook 'my-cc-mode-hook)
+(add-hook 'c-mode-common-hook (lambda () (setq comment-start "/* "
+     comment-end " */")))
 ;;------------------------------------------------------------------------------
 ;;key bindings
 ;;------------------------------------------------------------------------------
@@ -240,6 +193,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(fringe-mode nil nil (fringe))
  '(inhibit-startup-screen t)
  '(package-selected-packages (quote (writeroom-mode yasnippet emmet-mode)))
  '(writeroom-mode-line t)
@@ -250,4 +204,11 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "gray17" :foreground "white" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 150 :width normal :foundry "nil" :family "Inconsolata")))))
+ '(default ((t (:inherit nil :stipple nil :background "gray17" :foreground "white smoke" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 150 :width normal :foundry "nil" :family "Inconsolata"))))
+ '(cursor ((t (:background "White"))))
+ '(escape-glyph ((t (:foreground "green1"))))
+ '(font-lock-comment-face ((t (:foreground "orange1"))))
+ '(fringe ((t (:background "gray17"))))
+ '(minibuffer-prompt ((t (:foreground "green1"))))
+ '(mode-line ((t (:background "dark green" :foreground "wheat1" :box nil))))
+ '(region ((t (:background "DarkOrchid4")))))

@@ -1,0 +1,21 @@
+;; Object SimEngine/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "SimEngine/"
+  :tables
+  (list
+    (semanticdb-table "main.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("simEngine.h" include nil nil [493 515])
+            ("iostream" include (:system-flag t) nil [516 535])
+            ("algorithm" include (:system-flag t) nil [536 556])
+            ("vector" include (:system-flag t) nil [557 574])
+            ("main" function (:type "int") nil [787 1156]))          
+      :file "main.cpp"
+      :pointmax 1157
+      :fsize 1156
+      :lastmodtime '(22225 13995 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!jae!Documents!Work!SimEngine!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

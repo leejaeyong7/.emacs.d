@@ -1,0 +1,1228 @@
+;; Object Engine/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Engine/"
+  :tables
+  (list
+    (semanticdb-table "simEngine.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("_SIM_ENGINE_H_" variable (:constant-flag t) nil [527 541])
+            ("vector" include (:system-flag t) nil [751 768])
+            ("iostream" include (:system-flag t) nil [769 788])
+            ("algorithm" include (:system-flag t) nil [789 809])
+            ("string" include (:system-flag t) nil [810 827])
+            ("simGUI.h" include nil nil [828 847])
+            ("simPhysics.h" include nil nil [848 871])
+            ("simEntity.h" include nil nil [872 894])
+            ("simRobot.h" include nil nil [895 916])
+            ("simSensor.h" include nil nil [917 939])
+            ("enumerations.h" include nil nil [940 965])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1176 1196])
+            ("SimGUI" type
+               (:prototype t
+                :type "class")
+                nil [1623 1636])
+            ("SimEngine" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1655 1662])
+                    ("SimEngine" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("enableGUI" variable (:type "bool") (reparse-symbol arg-sub-list) [1803 1818]))                          
+                        :type ("SimEngine" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1793 1819])
+                    ("setupGUI" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1902 1918])
+                    ("run" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [2007 2018])
+                    ("getSimGUI" function
+                       (:pointer 1
+                        :type ("SimGUI" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2075 2111])
+                    ("getEntityVector" function
+                       (:pointer 1
+                        :type ("vector" type
+                             (:template-specifier 
+                                ( ("SimEntity" type (:pointer 1) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2224 2288])
+                    ("getEntityByName" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2472 2489]))                          
+                        :type ("SimEntity" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2445 2490])
+                    ("addEntity" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("type" variable (:type ("EntityType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2704 2720])
+                            ("obj" variable
+                               (:pointer 1
+                                :type ("SimEntity" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2721 2737]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2689 2738])
+                    ("removeEntity" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("obj" variable
+                               (:pointer 1
+                                :type ("SimEntity" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2961 2977]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2943 2978])
+                    ("attachEntity" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("robot" variable
+                               (:pointer 1
+                                :type ("SimRobot" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3180 3197])
+                            ("sensor" variable
+                               (:pointer 1
+                                :type ("SimSensor" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3198 3217]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3162 3218])
+                    ("detachEntity" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("robot" variable
+                               (:pointer 1
+                                :type ("SimRobot" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3425 3442])
+                            ("sensor" variable
+                               (:pointer 1
+                                :type ("SimSensor" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3443 3462]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3407 3463])
+                    ("private" label nil (reparse-symbol classsubparts) [3465 3473])
+                    ("simGUI" variable
+                       (:pointer 1
+                        :type ("SimGUI" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3543 3559])
+                    ("simPhysics" variable
+                       (:pointer 1
+                        :type ("SimPhysics" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3664 3688])
+                    ("simEntityVector" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("SimEntity" type (:pointer 1) nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [3728 3763])
+                    ("checkEntityName" type
+                       (:members 
+                          ( ("checkEntityName" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("name" variable
+                                       (:constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3859 3882]))                                  
+                                :type ("checkEntityName" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [3843 3905])
+                            ("name_holder" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3914 3938])
+                            ("()" function
+                               (:operator-flag t
+                                :arguments 
+                                  ( ("obj" variable
+                                       (:pointer 1
+                                        :type ("SimEntity" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3963 3978]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [3947 4059]))                          
+                        :type "struct")
+                        (reparse-symbol classsubparts) [3805 4066]))                  
+                :type "class")
+                nil [1637 4069]))          
+      :file "simEngine.h"
+      :pointmax 4077
+      :fsize 4076
+      :lastmodtime '(22213 19214 0 0)
+      :unmatched-syntax '((punctuation 2288 . 2289) (punctuation 2111 . 2112) (punctuation 2288 . 2289) (punctuation 2111 . 2112))
+      :lexical-table 
+        '(("_SIM_ENGINE_H_")
+          )
+)
+    (semanticdb-table "simGUI.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("_SIM_GUI_H_" variable (:constant-flag t) nil [512 523])
+            ("irrlicht.h" include (:system-flag t) nil [733 754])
+            ("algorithm" include (:system-flag t) nil [755 775])
+            ("vector" include (:system-flag t) nil [776 793])
+            ("typeinfo" include (:system-flag t) nil [794 813])
+            ("string" include (:system-flag t) nil [814 831])
+            ("enumerations.h" include nil nil [832 857])
+            ("eventHandler.h" include nil nil [858 883])
+            ("simEngine.h" include nil nil [884 906])
+            ("simEntity.h" include nil nil [907 929])
+            ("simRobot.h" include nil nil [930 951])
+            ("simGroundRobot.h" include nil nil [952 979])
+            ("simSensor.h" include nil nil [980 1002])
+            ("simCamera.h" include nil nil [1003 1025])
+            ("simGridNode.hpp" include nil nil [1026 1052])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1262 1282])
+            ("irr" using (:type ("irr" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1283 1303])
+            ("core" using (:type ("core" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1304 1325])
+            ("scene" using (:type ("scene" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1326 1348])
+            ("video" using (:type ("video" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1349 1371])
+            ("io" using (:type ("io" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1372 1391])
+            ("gui" using (:type ("gui" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1392 1412])
+            ("EntityMesh" type
+               (:members 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("SimEntity" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1658 1673])
+                    ("mesh" variable
+                       (:pointer 1
+                        :type ("IMeshSceneNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1678 1700]))                  
+                :type "struct")
+                nil [1627 1714])
+            ("EntityMesh" type
+               (:typedef ("EntityMesh" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [1627 1714])
+            ("EventHandler" type
+               (:prototype t
+                :type "class")
+                nil [1928 1947])
+            ("SimEntity" type
+               (:prototype t
+                :type "class")
+                nil [1948 1964])
+            ("SimEngine" type
+               (:prototype t
+                :type "class")
+                nil [1965 1981])
+            ("SimGUI" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1997 2004])
+                    ("EventHandler" friend nil (reparse-symbol classsubparts) [2009 2034])
+                    ("SimGUI" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("eng" variable
+                               (:pointer 1
+                                :type ("SimEngine" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2261 2277])
+                            ("text" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "wchar_t")
+                                (reparse-symbol arg-sub-list) [2278 2299])
+                            ("m_width" variable (:type ("u32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2311 2323])
+                            ("m_height" variable (:type ("u32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2324 2337])
+                            ("m_width_r" variable (:type ("u32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2349 2363])
+                            ("m_height_r" variable (:type ("u32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2364 2379])
+                            ("fullscreen" variable (:type "bool") (reparse-symbol arg-sub-list) [2391 2407]))                          
+                        :type ("SimGUI" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2254 2408])
+                    ("setup" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [2481 2494])
+                    ("draw" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [2572 2584])
+                    ("update" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [2671 2685])
+                    ("isRunning" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2759 2776])
+                    ("end" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [2852 2863])
+                    ("addEntitySceneNode" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("type" variable (:type ("EntityType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3021 3037])
+                            ("obj" variable
+                               (:pointer 1
+                                :type ("SimEntity" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3038 3054]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2997 3055])
+                    ("removeEntitySceneNode" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("obj" variable
+                               (:pointer 1
+                                :type ("SimEntity" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3222 3238]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3195 3239])
+                    ("attachEntityMesh" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("robot" variable
+                               (:pointer 1
+                                :type ("SimRobot" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3445 3462])
+                            ("sensor" variable
+                               (:pointer 1
+                                :type ("SimSensor" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3463 3482]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3423 3483])
+                    ("detachEntityMesh" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("robot" variable
+                               (:pointer 1
+                                :type ("SimRobot" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3690 3707])
+                            ("sensor" variable
+                               (:pointer 1
+                                :type ("SimSensor" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3708 3727]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3668 3728])
+                    ("promptEntityWindow" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [3870 3896])
+                    ("entityAttachWindow" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [4039 4065])
+                    ("private" label nil (reparse-symbol classsubparts) [4067 4075])
+                    ("engine" variable
+                       (:pointer 1
+                        :type ("SimEngine" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4108 4127])
+                    ("device" variable
+                       (:pointer 1
+                        :type ("IrrlichtDevice" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4166 4189])
+                    ("eh" variable
+                       (:pointer 1
+                        :type ("EventHandler" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4231 4249])
+                    ("width" variable (:type ("u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4275 4312])
+                    ("height" variable (:type ("u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4275 4312])
+                    ("width_r" variable (:type ("u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4275 4312])
+                    ("height_r" variable (:type ("u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4275 4312])
+                    ("entityMeshVector" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("EntityMesh" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [4344 4380])
+                    ("setPromptData" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("obj" variable
+                               (:pointer 1
+                                :type ("SimEntity" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4440 4455]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4421 4456])
+                    ("setAddPromptData" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("index" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4483 4493]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4461 4494])
+                    ("setEditPromptData" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("index" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4522 4532]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4499 4533])
+                    ("currObj" variable
+                       (:pointer 1
+                        :type ("SimEntity" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4575 4594])
+                    ("currPrompt" variable (:type "int") (reparse-symbol classsubparts) [4599 4614])
+                    ("currType" variable (:type "int") (reparse-symbol classsubparts) [4619 4632])
+                    ("createEntityObject" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [4637 4663])
+                    ("editEntityObject" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [4668 4692])
+                    ("setPromptWindow" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("wx" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4767 4774])
+                            ("wy" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4775 4782])
+                            ("ww" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4783 4790])
+                            ("wh" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4791 4798]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4746 4799])
+                    ("setPromptComboBox" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("cx" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4827 4834])
+                            ("cy" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4835 4842])
+                            ("cw" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4843 4850])
+                            ("ch" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4851 4858]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4804 4859])
+                    ("setNameBox" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("nx" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4880 4887])
+                            ("ny" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4888 4895])
+                            ("nw" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4896 4903])
+                            ("nh" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4904 4911])
+                            ("nm" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4912 4919]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4864 4920])
+                    ("setDofBox" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("dx" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4940 4947])
+                            ("dy" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4948 4955])
+                            ("dw" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4956 4963])
+                            ("dh" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4964 4971])
+                            ("dm" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4972 4979]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4925 4980])
+                    ("setAdvancedSetting" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("ax" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5009 5016])
+                            ("ay" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5017 5024])
+                            ("aw" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5025 5032])
+                            ("ah" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5033 5040]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4985 5041])
+                    ("setButtons" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("bx" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5062 5069])
+                            ("by" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5070 5077])
+                            ("bw" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5078 5085])
+                            ("bh" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5086 5093]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5046 5094])
+                    ("attachEntityObject" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [5168 5194])
+                    ("setDetachData" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("index" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5218 5228]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5199 5229])
+                    ("setContextMenu" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [5272 5294])
+                    ("checkEntityPointer" type
+                       (:members 
+                          ( ("checkEntityPointer" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("ptr" variable
+                                       (:pointer 1
+                                        :type ("SimEntity" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5398 5413]))                                  
+                                :type ("checkEntityPointer" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [5379 5434])
+                            ("ptr_holder" variable
+                               (:pointer 1
+                                :type ("SimEntity" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5443 5465])
+                            ("()" function
+                               (:operator-flag t
+                                :arguments 
+                                  ( ("obj" variable (:type ("EntityMesh" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5490 5505]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [5474 5567]))                          
+                        :type "struct")
+                        (reparse-symbol classsubparts) [5339 5574]))                  
+                :type "class")
+                nil [1982 5578]))          
+      :file "simGUI.h"
+      :pointmax 5586
+      :fsize 5585
+      :lastmodtime '(22225 13995 0 0)
+      :unmatched-syntax '((punctuation 2034 . 2035))
+      :lexical-table 
+        '(("_SIM_GUI_H_")
+          )
+)
+    (semanticdb-table "enumerations.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_SIM_ENUM_H_" variable (:constant-flag t) nil [551 563])
+            ("string" include (:system-flag t) nil [564 581])
+            ("optionType" type
+               (:members 
+                  ( ("STRING" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [821 828])
+                    ("DOUBLE" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [833 840])
+                    ("INTEGER" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [845 853]))                  
+                :type "enum")
+                nil [792 867])
+            ("OptionType" type
+               (:typedef ("optionType" type (:type "enum") nil nil)
+                :type "typedef")
+                nil [792 867])
+            ("entityType" type
+               (:members 
+                  ( ("ENTITY_TYPE_ROBOT" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [898 916])
+                    ("ENTITY_TYPE_SENSOR" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [921 940])
+                    ("ENTITY_TYPE_ENVIRONMENT" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [945 970]))                  
+                :type "enum")
+                nil [869 982])
+            ("EntityType" type
+               (:typedef ("entityType" type (:type "enum") nil nil)
+                :type "typedef")
+                nil [869 982])
+            ("" type
+               (:members 
+                  ( ("QUIT_BUTTON" variable
+                       (:constant-flag t
+                        :default-value (1025 1032)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1011 1032])
+                    ("PROMPT_ADD_WINDOW" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1066 1084])
+                    ("PROMPT_EDIT_WINDOW" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1089 1108])
+                    ("PROMPT_COMBO" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1113 1126])
+                    ("PROMPT_NAME" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1131 1143])
+                    ("PROMPT_ADVANCED_BOX" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1148 1168])
+                    ("PROMPT_POS_X" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1174 1187])
+                    ("PROMPT_POS_Y" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1192 1205])
+                    ("PROMPT_POS_Z" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1210 1223])
+                    ("PROMPT_ROT_A" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1228 1241])
+                    ("PROMPT_ROT_B" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1246 1259])
+                    ("PROMPT_ROT_C" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1264 1277])
+                    ("PROMPT_ADV_INPUT" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1282 1299])
+                    ("CLOSE_BUTTON" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1305 1318])
+                    ("CONFIRM_BUTTON" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1323 1338])
+                    ("REMOVE_BUTTON" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1343 1357])
+                    ("ADD_ROBOT" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1383 1393])
+                    ("ADD_SENSOR" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1398 1409])
+                    ("ADD_ENVIRONMENT" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1414 1430])
+                    ("EDIT_ROBOT" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1436 1447])
+                    ("EDIT_SENSOR" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1452 1464])
+                    ("EDIT_ENVIRONMENT" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1469 1486])
+                    ("ATTACH_ENTITY" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1492 1506])
+                    ("DETACH_ENTITY" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1511 1525])
+                    ("ATTACH_WINDOW" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1561 1575])
+                    ("ATTACH_COMBO1" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1580 1594])
+                    ("ATTACH_COMBO2" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1599 1614]))                  
+                :type "enum")
+                nil [1000 1615])
+            ("" type
+               (:members 
+                  ( ("SUB_ENTITY_ROBOT_QUAD" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1643 1665])
+                    ("SUB_ENTITY_ROBOT_GROUND" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1670 1694])
+                    ("SUB_ENTITY_SENSOR_CAM" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1699 1721])
+                    ("SUB_ENTITY_ENVIRONMENT_APRIL" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1726 1755])
+                    ("SUB_ENTITY_ENVIRONMENT_CUBE" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1760 1788])
+                    ("SUB_ENTITY_ENVIRONMENT_SPHERE" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1793 1824]))                  
+                :type "enum")
+                nil [1632 1825])
+            ("" type
+               (:members 
+                  ( ("ADD_ENTITY_PROMPT" variable
+                       (:constant-flag t
+                        :default-value (1867 1873)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1847 1873])
+                    ("EDIT_ENTITY_PROMPT" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1879 1898])
+                    ("ATTACH_ENTITY_PROMPT" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1903 1924])
+                    ("DETACH_ENTITY_PROMPT" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1929 1951]))                  
+                :type "enum")
+                nil [1837 1952]))          
+      :file "enumerations.h"
+      :pointmax 1961
+      :fsize 1960
+      :lastmodtime '(22212 43688 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_SIM_ENUM_H_")
+          )
+)
+    (semanticdb-table "eventHandler.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_EVENT_HANDLER_H_" variable (:constant-flag t) nil [533 550])
+            ("simGUI.h" include nil nil [759 778])
+            ("enumerations.h" include nil nil [779 804])
+            ("iostream" include (:system-flag t) nil [805 824])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [826 846])
+            ("irr" using (:type ("irr" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [847 867])
+            ("core" using (:type ("core" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [868 889])
+            ("scene" using (:type ("scene" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [890 912])
+            ("video" using (:type ("video" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [913 935])
+            ("io" using (:type ("io" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [936 955])
+            ("gui" using (:type ("gui" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [956 976])
+            ("SimGUI" type
+               (:prototype t
+                :type "class")
+                nil [1406 1419])
+            ("EventHandler" type
+               (:superclasses 
+                  ( ("IEventReceiver" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1465 1472])
+                    ("OnEvent" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("event" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("SEvent" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1669 1690]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1648 1691])
+                    ("IsKeyDown" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("keyCode" variable (:type ("EKEY_CODE" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1931 1949]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1908 1956])
+                    ("EventHandler" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("_gui" variable
+                               (:pointer 1
+                                :type ("SimGUI" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2104 2117]))                          
+                        :type ("EventHandler" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2091 2118])
+                    ("private" label nil (reparse-symbol classsubparts) [2119 2127])
+                    ("gui" variable
+                       (:pointer 1
+                        :type ("SimGUI" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2153 2166])
+                    ("KeyIsDown" variable
+                       (:dereference 1
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2224 2260]))                  
+                :type "class")
+                nil [1420 2268]))          
+      :file "eventHandler.h"
+      :pointmax 2276
+      :fsize 2275
+      :lastmodtime '(22187 53817 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_EVENT_HANDLER_H_")
+          )
+)
+    (semanticdb-table "simGridNode.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("irrlicht.h" include (:system-flag t) nil [263 284])
+            ("iostream" include (:system-flag t) nil [285 304])
+            ("irr" using (:type ("irr" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [305 325])
+            ("core" using (:type ("core" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [326 347])
+            ("scene" using (:type ("scene" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [348 370])
+            ("video" using (:type ("video" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [371 393])
+            ("io" using (:type ("io" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [394 413])
+            ("gui" using (:type ("gui" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [414 434])
+            ("GridNode" type
+               (:superclasses 
+                  ( ("ISceneNode" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [475 482])
+                    ("GridNode" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("parent" variable
+                               (:pointer 1
+                                :type ("ISceneNode" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [500 520])
+                            ("mgr" variable
+                               (:pointer 1
+                                :type ("ISceneManager" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [521 540])
+                            ("id" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [541 548])
+                            ("_x" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [565 572])
+                            ("_z" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [573 580])
+                            ("_step" variable
+                               (:default-value "1"
+                                :type ("s32" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [581 592]))                          
+                        :type ("GridNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [491 2078])
+                    ("GridNode" function
+                       (:destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [2087 2190])
+                    ("OnRegisterSceneNode" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [2200 2389])
+                    ("render" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [2399 3516])
+                    ("getBoundingBox" function
+                       (:typemodifiers ("virtual")
+                        :constant-flag t
+                        :type ("aabbox3d" type
+                             (:template-specifier 
+                                ( ("f32" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [3525 3620])
+                    ("getMaterialCount" function
+                       (:typemodifiers ("virtual")
+                        :type ("u32" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3629 3707])
+                    ("getMaterial" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("i" variable (:type ("u32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3747 3753]))                          
+                        :type ("SMaterial" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3716 3825])
+                    ("private" label nil (reparse-symbol classsubparts) [3830 3838])
+                    ("Material" variable (:type ("SMaterial" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3847 3866])
+                    ("box" variable (:type ("aabbox3d" type
+                         (:template-specifier 
+                            ( ("f32" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [3875 3893])
+                    ("x" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3902 3908])
+                    ("z" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3917 3923])
+                    ("step" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3932 3941])
+                    ("vectorArrayX" variable
+                       (:pointer 1
+                        :type ("vector3df" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3950 3975])
+                    ("vectorArrayZ" variable
+                       (:pointer 1
+                        :type ("vector3df" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3984 4009]))                  
+                :type "class")
+                nil [435 4012]))          
+      :file "simGridNode.hpp"
+      :pointmax 4014
+      :fsize 4013
+      :lastmodtime '(22225 13995 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "simGUI.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("simGUI.h" include nil nil [487 506])
+            ("SimGUI" function
+               (:constructor-flag t
+                :parent "SimGUI"
+                :arguments 
+                  ( ("eng" variable
+                       (:pointer 1
+                        :type ("SimEngine" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [736 752])
+                    ("text" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "wchar_t")
+                        (reparse-symbol arg-sub-list) [753 774])
+                    ("m_width" variable (:type ("u32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [790 802])
+                    ("m_height" variable (:type ("u32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [803 816])
+                    ("m_width_r" variable (:type ("u32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [832 846])
+                    ("m_height_r" variable (:type ("u32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [847 862])
+                    ("fullscreen" variable (:type "bool") (reparse-symbol arg-sub-list) [878 894]))                  
+                :type ("SimGUI" type (:type "class") nil nil))
+                nil [721 1852])
+            ("setup" function
+               (:parent "SimGUI"
+                :type "void")
+                nil [1854 4087])
+            ("draw" function
+               (:parent "SimGUI"
+                :type "void")
+                nil [4089 4886])
+            ("update" function
+               (:parent "SimGUI"
+                :type "void")
+                nil [4887 5379])
+            ("isRunning" function
+               (:parent "SimGUI"
+                :type "bool")
+                nil [5381 5435])
+            ("end" function
+               (:parent "SimGUI"
+                :type "void")
+                nil [5437 5479])
+            ("addEntitySceneNode" function
+               (:parent "SimGUI"
+                :arguments 
+                  ( ("type" variable (:type ("EntityType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5513 5529])
+                    ("obj" variable
+                       (:pointer 1
+                        :type ("SimEntity" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5530 5546]))                  
+                :type "void")
+                nil [5481 6536])
+            ("removeEntitySceneNode" function
+               (:parent "SimGUI"
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("SimEntity" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6572 6588]))                  
+                :type "void")
+                nil [6537 7251])
+            ("attachEntityMesh" function
+               (:parent "SimGUI"
+                :arguments 
+                  ( ("robot" variable
+                       (:pointer 1
+                        :type ("SimRobot" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7283 7300])
+                    ("sensor" variable
+                       (:pointer 1
+                        :type ("SimSensor" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7301 7320]))                  
+                :type "void")
+                nil [7253 7890])
+            ("detachEntityMesh" function
+               (:parent "SimGUI"
+                :arguments 
+                  ( ("robot" variable
+                       (:pointer 1
+                        :type ("SimRobot" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7922 7939])
+                    ("sensor" variable
+                       (:pointer 1
+                        :type ("SimSensor" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7940 7959]))                  
+                :type "void")
+                nil [7892 8609])
+            ("entityAttachWindow" function
+               (:parent "SimGUI"
+                :type "void")
+                nil [8610 11504])
+            ("promptEntityWindow" function
+               (:parent "SimGUI"
+                :type "void")
+                nil [11506 12727])
+            ("attachEntityObject" function
+               (:parent "SimGUI"
+                :type "void")
+                nil [13078 13991])
+            ("setDetachData" function
+               (:parent "SimGUI"
+                :arguments 
+                  ( ("index" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14020 14030]))                  
+                :type "void")
+                nil [13993 14952])
+            ("createEntityObject" function
+               (:parent "SimGUI"
+                :type "void")
+                nil [14953 15079])
+            ("editEntityObject" function
+               (:parent "SimGUI"
+                :type "void")
+                nil [15081 17643])
+            ("setEditPromptData" function
+               (:parent "SimGUI"
+                :arguments 
+                  ( ("index" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17675 17685]))                  
+                :type "void")
+                nil [17644 18070])
+            ("setAddPromptData" function
+               (:parent "SimGUI"
+                :arguments 
+                  ( ("index" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18101 18111]))                  
+                :type "void")
+                nil [18071 19502])
+            ("setPromptData" function
+               (:parent "SimGUI"
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("SimEntity" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19530 19546]))                  
+                :type "void")
+                nil [19503 23512])
+            ("setPromptWindow" function
+               (:parent "SimGUI"
+                :arguments 
+                  ( ("wx" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [23542 23549])
+                    ("wy" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [23550 23557])
+                    ("ww" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [23558 23565])
+                    ("wh" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [23566 23573]))                  
+                :type "void")
+                nil [23513 24806])
+            ("setPromptComboBox" function
+               (:parent "SimGUI"
+                :arguments 
+                  ( ("cx" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [24838 24845])
+                    ("cy" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [24846 24853])
+                    ("cw" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [24854 24861])
+                    ("ch" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [24862 24869]))                  
+                :type "void")
+                nil [24807 28668])
+            ("setNameBox" function
+               (:parent "SimGUI"
+                :arguments 
+                  ( ("nx" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [28693 28700])
+                    ("ny" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [28701 28708])
+                    ("nw" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [28709 28716])
+                    ("nh" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [28717 28724])
+                    ("nm" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [28725 28732]))                  
+                :type "void")
+                nil [28669 29545])
+            ("setDofBox" function
+               (:parent "SimGUI"
+                :arguments 
+                  ( ("dx" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [29569 29576])
+                    ("dy" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [29577 29584])
+                    ("dw" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [29585 29592])
+                    ("dh" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [29593 29600])
+                    ("dm" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [29601 29608]))                  
+                :type "void")
+                nil [29546 32246])
+            ("setAdvancedSetting" function
+               (:parent "SimGUI"
+                :arguments 
+                  ( ("ax" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [32279 32286])
+                    ("ay" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [32287 32294])
+                    ("aw" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [32295 32302])
+                    ("ah" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [32303 32310]))                  
+                :type "void")
+                nil [32247 32992])
+            ("setButtons" function
+               (:parent "SimGUI"
+                :arguments 
+                  ( ("bx" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [33017 33024])
+                    ("by" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [33025 33032])
+                    ("bw" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [33033 33040])
+                    ("bh" variable (:type ("s32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [33041 33048]))                  
+                :type "void")
+                nil [32993 34829])
+            ("setContextMenu" function
+               (:parent "SimGUI"
+                :type "void")
+                nil [34832 36915]))          
+      :file "simGUI.cpp"
+      :pointmax 36916
+      :fsize 36915
+      :lastmodtime '(22225 13995 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "simEngine.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("simEngine.h" include nil nil [494 516])
+            ("SimEngine" function
+               (:constructor-flag t
+                :parent "SimEngine"
+                :arguments 
+                  ( ("enableGUI" variable (:type "bool") (reparse-symbol arg-sub-list) [752 767]))                  
+                :type ("SimEngine" type (:type "class") nil nil))
+                nil [731 897])
+            ("setupGUI" function
+               (:parent "SimEngine"
+                :type "void")
+                nil [899 997])
+            ("addEntity" function
+               (:parent "SimEngine"
+                :arguments 
+                  ( ("type" variable (:type ("EntityType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1025 1041])
+                    ("obj" variable
+                       (:pointer 1
+                        :type ("SimEntity" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1042 1058]))                  
+                :type "void")
+                nil [999 1172])
+            ("getEntityByName" function
+               (:pointer 1
+                :parent "SimEngine"
+                :arguments 
+                  ( ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1211 1228]))                  
+                :type ("SimEntity" type (:type "class") nil nil))
+                nil [1173 1489])
+            ("removeEntity" function
+               (:parent "SimEngine"
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("SimEntity" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1519 1535]))                  
+                :type "void")
+                nil [1490 1839])
+            ("run" function
+               (:parent "SimEngine"
+                :type "void")
+                nil [1841 1998])
+            ("attachEntity" function
+               (:parent "SimEngine"
+                :arguments 
+                  ( ("robot" variable
+                       (:pointer 1
+                        :type ("SimRobot" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2028 2044])
+                    ("sensor" variable
+                       (:pointer 1
+                        :type ("SimSensor" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2044 2063]))                  
+                :type "void")
+                nil [1999 2235])
+            ("detachEntity" function
+               (:parent "SimEngine"
+                :arguments 
+                  ( ("robot" variable
+                       (:pointer 1
+                        :type ("SimRobot" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2266 2282])
+                    ("sensor" variable
+                       (:pointer 1
+                        :type ("SimSensor" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2282 2301]))                  
+                :type "void")
+                nil [2237 2476]))          
+      :file "simEngine.cpp"
+      :pointmax 2691
+      :fsize 2690
+      :lastmodtime '(22211 42800 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "eventHandler.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("eventHandler.h" include nil nil [498 523])
+            ("OnEvent" function
+               (:parent "EventHandler"
+                :arguments 
+                  ( ("event" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("SEvent" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [764 785]))                  
+                :type "bool")
+                nil [737 7037])
+            ("IsKeyDown" function
+               (:parent "EventHandler"
+                :arguments 
+                  ( ("keyCode" variable (:type ("EKEY_CODE" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7068 7086]))                  
+                :type "bool")
+                nil [7039 7127])
+            ("EventHandler" function
+               (:constructor-flag t
+                :parent "EventHandler"
+                :arguments 
+                  ( ("_gui" variable
+                       (:pointer 1
+                        :type ("SimGUI" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7156 7170]))                  
+                :type ("EventHandler" type (:type "class") nil nil))
+                nil [7129 7270]))          
+      :file "eventHandler.cpp"
+      :pointmax 7271
+      :fsize 7270
+      :lastmodtime '(22212 49060 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!jae!Documents!Work!SimEngine!Engine!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
