@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: divider-comment-til
+# key: dct
+# binding: direct-keybinding
+# --
+//${1:$(make-string (- 80 4 (current-column)) ?\=)}//
+//$1
+//${1:$(make-string (- 80 4 (current-column)) ?\=)}//

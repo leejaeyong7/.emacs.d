@@ -193,6 +193,9 @@
  ;; If there is more than one, they won't work right.
  '(fringe-mode nil nil (fringe))
  '(inhibit-startup-screen t)
+ '(js-indent-level 2)
+ '(js-js-switch-tabs t)
+ '(js-switch-indent-offset 2)
  '(package-selected-packages (quote (writeroom-mode yasnippet emmet-mode)))
  '(writeroom-mode-line t)
  '(writeroom-restore-window-config t))
