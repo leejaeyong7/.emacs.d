@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: divider-comment-wrap
+# key: dcw
+# binding: direct-keybinding
+# --
+/*${1:$(make-string (- 80 4) ?\-)}*/
+/*${1:$(make-string (floor (/ (- 80 4 (string-width yas-text)) 2.0)) ?\ )}${1:TITLE$(upcase yas-text)}${1:$(make-string (ceiling (/ (- 80 4 (string-width yas-text)) 2.0)) ?\ )}*/
+/*${1:$(make-string (- 80 4 ) ?\-)}*/
+$2
+
+/*${1:$(make-string (- 80 4) ?\-)}*/
+/*${1:$(make-string (floor (/ (- 80 8 (string-width yas-text)) 2.0)) ?\ )}END ${1:$(upcase yas-text)}${1:$(make-string (ceiling (/ (- 80 8 (string-width yas-text)) 2.0)) ?\ )}*/
+/*${1:$(make-string (- 80 4 ) ?\-)}*/
