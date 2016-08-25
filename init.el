@@ -55,11 +55,20 @@
 (use-package helm
   :init
   (helm-mode 1)
+  (use-package helm-ac)
+  (use-package projectile
+    :init
+    (use-package helm-projectile
+      :init
+      (helm-projectile-on)
+      :config)
+    :config)
   :config
   (setq helm-split-window-in-side-p           t
         ;helm-move-to-line-cycle-in-source     t
         helm-ff-search-library-in-sexp        t )
   (global-set-key (kbd "M-x") 'helm-M-x))
+
 
 ;;------------------------------------------------------------------------------
 ;;flycheck
@@ -72,12 +81,6 @@
 ;;     (add-hook 'c-mode-common-hook
 ;;               (lambda () (if (derived-mode-p 'c-mode 'c++-mode)
 ;;                              (flycheck-select-checker 'c/c++-gcc))))))
-;;------------------------------------------------------------------------------
-;;key chords
-;;------------------------------------------------------------------------------
-;; (use-package key-chord
-;;   :init
-;;   (key-chord-mode 1)
 ;;------------------------------------------------------------------------------
 ;;emmet mode
 ;;------------------------------------------------------------------------------
@@ -102,8 +105,19 @@
     (yas-global-mode 1))
 
 
+;;------------------------------------------------------------------------------
+;; evil mode
+;;------------------------------------------------------------------------------
 (use-package evil
     :init
+    (use-package evil-mc
+      :init
+      (evil-mc-mode 1)
+      :config
+      (global-set-key (kbd "C-c s-d") 'evil-mc-make-all-cursors)
+      ;; (global-set-key (kbd "C-s-d") (evil-mc-undo-all-cursors))
+      (global-set-key (kbd "s-d") 'evil-mc-make-and-goto-next-match)
+      (global-set-key (kbd "C-s-d") 'evil-mc-skip-and-goto-next-match))
     (use-package evil-leader
         :init
         (global-evil-leader-mode)
@@ -149,8 +163,19 @@
   (key-chord-define evil-operator-state-map "jk" 'evil-normal-state)
   (key-chord-define evil-insert-state-map "jk" 'evil-normal-state)
   (key-chord-define evil-replace-state-map "jk" 'evil-normal-state))
-
-
+;;------------------------------------------------------------------------------
+;; auto complete mode
+;;------------------------------------------------------------------------------
+(use-package expand-region
+  :init
+  :config
+  (global-set-key (kbd "C-=") 'er/expand-region))
+;;------------------------------------------------------------------------------
+;; auto complete mode
+;;------------------------------------------------------------------------------
+(use-package auto-complete
+  :init
+  (auto-complete-mode 1));
 ;;------------------------------------------------------------------------------
 ;;
 ;;    Syntax / Key bindings
@@ -173,11 +198,20 @@
 (add-hook 'c-mode-common-hook (lambda () (setq comment-start "/* "
      comment-end " */")))
 ;;------------------------------------------------------------------------------
+;; js mode syntax
+;;------------------------------------------------------------------------------
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+(eval-after-load "js2-mode"
+  '(progn
+     (setq-default js2-basic-offset 2)))
+;;------------------------------------------------------------------------------
 ;;key bindings
 ;;------------------------------------------------------------------------------
 (global-set-key (kbd "<f9>")
                 (lambda () (interactive)
                   (find-file-other-window user-init-file)))
+(global-set-key (kbd "C-c C-p") 'projectile-global-mode)
+(global-set-key (kbd "C-x C-g") 'neotree-toggle)
 (global-unset-key (kbd "C-x C-b"))
 (global-set-key (kbd "C-x C-b")(lambda () (interactive) (ibuffer t)))
 
@@ -191,6 +225,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(css-indent-offset 2)
  '(fringe-mode nil nil (fringe))
  '(inhibit-startup-screen t)
  '(js-indent-level 2)

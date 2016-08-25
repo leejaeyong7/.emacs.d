@@ -6,9 +6,16 @@
         completion-at-point
         copy-rectangle-as-kill
         end-of-buffer
+        evil-backward-word-begin
         evil-change
         evil-delete
+        evil-digit-argument-or-evil-beginning-of-line
+        evil-find-char
         evil-force-normal-state
+        evil-forward-word-begin
+        evil-normal-state
+        evil-previous-line
+        evil-visual-char
         indent-for-tab-command
         kill-region
         move-to-window-line-top-bottom
@@ -19,4 +26,9 @@
 
 (setq mc/cmds-to-run-once
       '(
+        evil-forward-char
+        evil-next-line
+        evil-substitute
+        evil-window-right
+        helm-M-x
         ))
