@@ -212,6 +212,7 @@
                   (find-file-other-window user-init-file)))
 (global-set-key (kbd "C-c C-p") 'projectile-global-mode)
 (global-set-key (kbd "C-x C-g") 'neotree-toggle)
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-unset-key (kbd "C-x C-b"))
 (global-set-key (kbd "C-x C-b")(lambda () (interactive) (ibuffer t)))
 
