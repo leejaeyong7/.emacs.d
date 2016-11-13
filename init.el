@@ -12,7 +12,8 @@
     (progn
       ;; remove scroll bar
       (scroll-bar-mode -1)
-          (tool-bar-mode -1)))
+      (tool-bar-mode -1)))
+
 (menu-bar-mode -1)
 (column-number-mode 1)
 (show-paren-mode 1)
@@ -65,7 +66,7 @@
     :config)
   :config
   (setq helm-split-window-in-side-p           t
-        ;helm-move-to-line-cycle-in-source     t
+        helm-move-to-line-cycle-in-source     t
         helm-ff-search-library-in-sexp        t )
   (global-set-key (kbd "M-x") 'helm-M-x))
 
@@ -73,14 +74,14 @@
 ;;------------------------------------------------------------------------------
 ;;flycheck
 ;;------------------------------------------------------------------------------
-;; (use-package flycheck
-;;   :init
-;;   (global-flycheck-mode 1)
-;;   :config
-;;   (when (eq system-type 'gnu/linux)
-;;     (add-hook 'c-mode-common-hook
-;;               (lambda () (if (derived-mode-p 'c-mode 'c++-mode)
-;;                              (flycheck-select-checker 'c/c++-gcc))))))
+(use-package flycheck
+  :init
+  (global-flycheck-mode 1)
+  :config
+  (when (eq system-type 'gnu/linux)
+    (add-hook 'c-mode-common-hook
+              (lambda () (if (derived-mode-p 'c-mode 'c++-mode)
+                             (flycheck-select-checker 'c/c++-gcc))))))
 ;;------------------------------------------------------------------------------
 ;;emmet mode
 ;;------------------------------------------------------------------------------
@@ -108,61 +109,61 @@
 ;;------------------------------------------------------------------------------
 ;; evil mode
 ;;------------------------------------------------------------------------------
-(use-package evil
-    :init
-    (use-package evil-mc
-      :init
-      (evil-mc-mode 1)
-      :config
-      (global-set-key (kbd "C-c s-d") 'evil-mc-make-all-cursors)
-      ;; (global-set-key (kbd "C-s-d") (evil-mc-undo-all-cursors))
-      (global-set-key (kbd "s-d") 'evil-mc-make-and-goto-next-match)
-      (global-set-key (kbd "C-s-d") 'evil-mc-skip-and-goto-next-match))
-    (use-package evil-leader
-        :init
-        (global-evil-leader-mode)
-        :config
-        (evil-leader/set-key
-        "e" 'helm-find-files
-        "b" 'switch-to-buffer
-        "k" 'kill-buffer)    
-        (evil-leader/set-leader "<SPC>")
-        (use-package evil-nerd-commenter
-          :init
-          :config
-            (evil-leader/set-key
-            "ci" 'evilnc-comment-or-uncomment-lines
-            "cl" 'evilnc-quick-comment-or-uncomment-to-the-line
-            "ll" 'evilnc-quick-comment-or-uncomment-to-the-line
-            "cc" 'evilnc-copy-and-comment-lines
-            "cp" 'evilnc-comment-or-uncomment-paragraphs
-            "cr" 'comment-or-uncomment-region
-            "cv" 'evilnc-toggle-invert-comment-line-by-line   
-            "\\" 'evilnc-comment-operator)))
-    :config
-    (evil-mode 1)
-    (define-key evil-normal-state-map (kbd "C-u") 'evil-scroll-up)
-    (define-key evil-normal-state-map (kbd "C-w q") 'delete-window)
-    (use-package evil-surround
-        :config
-        (global-evil-surround-mode 1)))
+;; (use-package evil
+;;     :init
+;;     (use-package evil-mc
+;;       :init
+;;       (evil-mc-mode 1)
+;;       :config
+;;       (global-set-key (kbd "C-c s-d") 'evil-mc-make-all-cursors)
+;;       ;; (global-set-key (kbd "C-s-d") (evil-mc-undo-all-cursors))
+;;       (global-set-key (kbd "s-d") 'evil-mc-make-and-goto-next-match)
+;;       (global-set-key (kbd "C-s-d") 'evil-mc-skip-and-goto-next-match))
+;;     (use-package evil-leader
+;;         :init
+;;         (global-evil-leader-mode)
+;;         :config
+;;         (evil-leader/set-key
+;;         "e" 'helm-find-files
+;;         "b" 'switch-to-buffer
+;;         "k" 'kill-buffer)    
+;;         (evil-leader/set-leader "<SPC>")
+;;         (use-package evil-nerd-commenter
+;;           :init
+;;           :config
+;;             (evil-leader/set-key
+;;             "ci" 'evilnc-comment-or-uncomment-lines
+;;             "cl" 'evilnc-quick-comment-or-uncomment-to-the-line
+;;             "ll" 'evilnc-quick-comment-or-uncomment-to-the-line
+;;             "cc" 'evilnc-copy-and-comment-lines
+;;             "cp" 'evilnc-comment-or-uncomment-paragraphs
+;;             "cr" 'comment-or-uncomment-region
+;;             "cv" 'evilnc-toggle-invert-comment-line-by-line   
+;;             "\\" 'evilnc-comment-operator)))
+;;     :config
+;;     (evil-mode 1)
+;;     (define-key evil-normal-state-map (kbd "C-u") 'evil-scroll-up)
+;;     (define-key evil-normal-state-map (kbd "C-w q") 'delete-window)
+;;     (use-package evil-surround
+;;         :config
+;;         (global-evil-surround-mode 1)))
 
 ;;------------------------------------------------------------------------------
 ;; key chord mode
 ;;------------------------------------------------------------------------------
-(use-package key-chord
-  :init
-  (key-chord-mode 1)
-  :config
-  ;; emacs, insert, motion, normal, visual, replace, operator
-  (key-chord-define evil-normal-state-map "cp" 'c++-mode)
-  (key-chord-define evil-normal-state-map ";;" 'move-end-of-line)
-  (key-chord-define evil-emacs-state-map "jk" 'evil-normal-state)
-  (key-chord-define evil-motion-state-map "jk" 'evil-normal-state)
-  (key-chord-define evil-visual-state-map "jk" 'evil-normal-state)
-  (key-chord-define evil-operator-state-map "jk" 'evil-normal-state)
-  (key-chord-define evil-insert-state-map "jk" 'evil-normal-state)
-  (key-chord-define evil-replace-state-map "jk" 'evil-normal-state))
+;; (use-package key-chord
+;;   :init
+;;   (key-chord-mode 1)
+;;   :config
+;;   ;; emacs, insert, motion, normal, visual, replace, operator
+;;   (key-chord-define evil-normal-state-map "cp" 'c++-mode)
+;;   (key-chord-define evil-normal-state-map ";;" 'move-end-of-line)
+;;   (key-chord-define evil-emacs-state-map "jk" 'evil-normal-state)
+;;   (key-chord-define evil-motion-state-map "jk" 'evil-normal-state)
+;;   (key-chord-define evil-visual-state-map "jk" 'evil-normal-state)
+;;   (key-chord-define evil-operator-state-map "jk" 'evil-normal-state)
+;;   (key-chord-define evil-insert-state-map "jk" 'evil-normal-state)
+;;   (key-chord-define evil-replace-state-map "jk" 'evil-normal-state))
 ;;------------------------------------------------------------------------------
 ;; auto complete mode
 ;;------------------------------------------------------------------------------
@@ -175,7 +176,15 @@
 ;;------------------------------------------------------------------------------
 (use-package auto-complete
   :init
-  (auto-complete-mode 1));
+  (auto-complete-mode 1))
+;;------------------------------------------------------------------------------
+;; auto complete mode
+;;------------------------------------------------------------------------------
+(use-package slime
+  :init
+  (slime-setup '(slime-fancy))
+  (setq inferior-lisp-program "sbcl")
+  (use-package slime-autoloads))
 ;;------------------------------------------------------------------------------
 ;;
 ;;    Syntax / Key bindings
@@ -210,11 +219,11 @@
 (global-set-key (kbd "<f9>")
                 (lambda () (interactive)
                   (find-file-other-window user-init-file)))
-(global-set-key (kbd "C-c C-p") 'projectile-global-mode)
+(global-set-key (kbd "C-c C-p") 'projectile-mode)
 (global-set-key (kbd "C-x C-g") 'neotree-toggle)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-unset-key (kbd "C-x C-b"))
-(global-set-key (kbd "C-x C-b")(lambda () (interactive) (ibuffer t)))
+(global-set-key (kbd "C-x C-b") 'helm-buffers-list)
 
 ;;------------------------------------------------------------------------------
 
