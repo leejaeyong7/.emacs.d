@@ -84,8 +84,8 @@
 ;;------------------------------------------------------------------------------
 (use-package magit
   :init
-  (global-set-key (kbd "C-x g") 'magit-status)
-  :defer t)
+  (global-set-key (kbd "C-x g") 'magit-status))
+  ;:defer t)
 
 ;;------------------------------------------------------------------------------
 ;;helm mode
@@ -97,10 +97,9 @@
   (use-package projectile
     :init
     (use-package helm-projectile
-      :init
-      (helm-projectile-on)
-      :config)
-    :defer t)
+      :config
+      (helm-projectile-on)              
+      ))
   :config
   (setq helm-split-window-in-side-p           t
         helm-move-to-line-cycle-in-source     t
