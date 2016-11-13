@@ -26,12 +26,48 @@
 ;;------------------------------------------------------------------------------
 ;;    Package list setup
 ;;------------------------------------------------------------------------------
-(require 'package)
-(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
-(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
-(when (< emacs-major-version 24)
-  (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
+; list the packages you want
+(setq package-list '(
+                     package
+                     magit
+                     helm
+                     projectile
+                     helm-projectile
+                     js2-mode
+                     multiple-cursors
+                     flycheck
+                     emmet-mode
+                     org
+                     yasnippet
+                     expand-region
+                     auto-complete
+                     slime
+                     neotree
+                     ))
+
+; list the repositories containing them
+(setq package-archives '(("elpa" . "http://tromey.com/elpa/")
+                         ("gnu" . "http://elpa.gnu.org/packages/")
+                         ("marmalade" . "http://marmalade-repo.org/packages/")))
+
+; activate all the packages (in particular autoloads)
 (package-initialize)
+
+; fetch the list of packages available 
+(unless package-archive-contents
+  (package-refresh-contents))
+
+; install the missing packages
+(dolist (package package-list)
+  (unless (package-installed-p package)
+    (package-install package)))
+
+;; (require 'package)
+;; (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
+;; (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
+;; (when (< emacs-major-version 24)
+;;   (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
+;; (package-initialize)
 
 ;;------------------------------------------------------------------------------
 ;;
@@ -48,7 +84,8 @@
 ;;------------------------------------------------------------------------------
 (use-package magit
   :init
-  (global-set-key (kbd "C-x g") 'magit-status))
+  (global-set-key (kbd "C-x g") 'magit-status)
+  :defer t)
 
 ;;------------------------------------------------------------------------------
 ;;helm mode
@@ -63,7 +100,7 @@
       :init
       (helm-projectile-on)
       :config)
-    :config)
+    :defer t)
   :config
   (setq helm-split-window-in-side-p           t
         helm-move-to-line-cycle-in-source     t
@@ -184,7 +221,8 @@
   :init
   (slime-setup '(slime-fancy))
   (setq inferior-lisp-program "sbcl")
-  (use-package slime-autoloads))
+  (use-package slime-autoloads)
+  :defer t)
 ;;------------------------------------------------------------------------------
 ;;
 ;;    Syntax / Key bindings
