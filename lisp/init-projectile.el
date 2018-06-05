@@ -4,6 +4,7 @@
 
 (use-package projectile
   :init
-  (projectile-mode 1))
+  (projectile-mode 1)
+  (use-package ag))
 (provide 'init-projectile)
 ;;; init-projectile.el ends here

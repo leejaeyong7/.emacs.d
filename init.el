@@ -41,13 +41,14 @@
 (require 'init-javascript)
 (require 'init-cpp)
 (require 'init-projectile)
-;; (require 'init-git)
+(require 'init-git)
 (require 'init-snippet)
-;; (require 'init-flycheck)
+(require 'init-flycheck)
 (require 'init-org)
 (require 'init-auto-complete)
 (require 'init-minibuffer)
 (require 'init-evil)
+(require 'init-undo-tree)
 
 ;;------------------------------------------------------------------------------
 
@@ -67,7 +68,7 @@
  '(js-switch-indent-offset 2)
  '(package-selected-packages
    (quote
-    (org counsel ivy writeroom-mode yasnippet emmet-mode)))
+    (esup org counsel ivy writeroom-mode yasnippet emmet-mode)))
  '(writeroom-mode-line t)
  '(writeroom-restore-window-config t))
 
