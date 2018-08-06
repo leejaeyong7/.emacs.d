@@ -30,8 +30,6 @@
 (show-paren-mode 1)
 (recentf-mode 1)
 
-(when (eq system-type 'darwin) (exec-path-from-shell-initialize))
-
 ;;------------------------------------------------------------------------------
 ;;    Package list setup
 ;;------------------------------------------------------------------------------
