@@ -41,7 +41,7 @@
 (require 'init-projectile)
 (require 'init-git)
 (require 'init-snippet)
-(require 'init-flycheck)
+;(require 'init-flycheck)
 (require 'init-org)
 (require 'init-auto-complete)
 (require 'init-minibuffer)

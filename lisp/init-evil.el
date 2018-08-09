@@ -17,6 +17,7 @@
       "<SPC>" 'counsel-M-x
       "r" 'counsel-recentf
       "p" 'counsel-projectile-find-file
+      "f" 'counsel-projectile-find-file
       "." 'counsel-find-file
       "/" 'counsel-projectile-ag
       "b" 'ivy-switch-buffer
@@ -32,6 +33,7 @@
     :init
     (evil-mc-mode 1))
   :config
+  (define-key evil-normal-state-map (kbd "/") 'swiper)
   (define-key evil-normal-state-map (kbd "C-u") 'evil-scroll-up)
   (define-key evil-normal-state-map (kbd "C-w q") 'delete-window))
 
