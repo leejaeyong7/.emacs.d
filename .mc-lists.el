@@ -9,13 +9,22 @@
         evil-backward-word-begin
         evil-change
         evil-delete
+        evil-delete-line
         evil-digit-argument-or-evil-beginning-of-line
+        evil-digit-argument-or-evil-multiedit--beginning-of-line
+        evil-end-of-line
         evil-find-char
         evil-force-normal-state
         evil-forward-word-begin
+        evil-insert
+        evil-multiedit--end-of-line
+        evil-multiedit-abort
         evil-normal-state
         evil-previous-line
         evil-visual-char
+        evil-visual-line
+        evil-yank
+        iedit-delete-occurrences
         indent-for-tab-command
         kill-region
         move-to-window-line-top-bottom
@@ -31,4 +40,5 @@
         evil-substitute
         evil-window-right
         helm-M-x
+        iedit-switch-to-mc-mode
         ))
