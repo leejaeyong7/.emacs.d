@@ -46,7 +46,13 @@
 (require 'init-auto-complete)
 (require 'init-minibuffer)
 (require 'init-evil)
+(require 'init-writeroom)
+(require 'init-neotree)
 (require 'init-undo-tree)
+
+;; platform specific
+(when *is-a-mac*
+  (require 'init-mac-path-setup))
 
 ;;------------------------------------------------------------------------------
 
