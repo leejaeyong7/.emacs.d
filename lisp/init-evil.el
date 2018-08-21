@@ -46,6 +46,7 @@
   (evil-define-key 'normal 'global (kbd "zd") 'outline-show-children)
   (evil-define-key 'normal 'global (kbd "zf") 'outline-show-subtree)
   (evil-define-key 'normal 'global (kbd "zg") 'outline-hide-subtree)
+  (evil-define-key 'insert 'global (kbd "TAB") 'yas-expand)
   ; neotree maps
   (evil-define-key 'normal neotree-mode-map (kbd "TAB") 'neotree-enter)
   (evil-define-key 'normal neotree-mode-map (kbd "q") 'neotree-hide)
