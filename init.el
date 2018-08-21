@@ -13,6 +13,7 @@
 
 (defconst *spell-check-support-enabled* nil)
 (defconst *is-a-mac* (eq system-type 'darwin))
+(defconst *global-todo-org* "~/Dropbox/Notes/Todo.org")
 
 ;;------------------------------------------------------------------------------
 ;; Bootstrap config

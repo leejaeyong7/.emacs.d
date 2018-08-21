@@ -30,22 +30,44 @@
       "=" 'writeroom-mode
       "\\" 'toggle-frame-fullscreen
       "cl" 'evilnc-comment-or-uncomment-lines
+      "a" 'org-agenda
+      "z" 'org-show-todo-tree
+      "c" 'org-archive-subtree
       "ui" (lambda () (interactive)
-             (find-file-other-window user-init-file))))
+             (find-file-other-window user-init-file))
+      "op" (lambda () (interactive)
+             (find-file-other-window *global-todo-org*))))
   :config
-  (define-key evil-normal-state-map (kbd "/") 'swiper)
-  (define-key evil-normal-state-map (kbd "C-u") 'evil-scroll-up)
-  (define-key evil-normal-state-map (kbd "C-w q") 'delete-window)
-  (add-hook 'neotree-mode-hook
-            (lambda ()
-              (define-key evil-normal-state-local-map (kbd "TAB") 'neotree-enter)
-              (define-key evil-normal-state-local-map (kbd "SPC") 'neotree-quick-look)
-              (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide)
-              (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)
-              (define-key evil-normal-state-local-map (kbd "g") 'neotree-refresh)
-              (define-key evil-normal-state-local-map (kbd "n") 'neotree-next-line)
-              (define-key evil-normal-state-local-map (kbd "p") 'neotree-previous-line)
-              (define-key evil-normal-state-local-map (kbd "A") 'neotree-stretch-toggle)
-              (define-key evil-normal-state-local-map (kbd "H") 'neotree-hidden-file-toggle))))
+  ; global maps
+  (evil-define-key 'normal 'global (kbd "/") 'swiper)
+  (evil-define-key 'normal 'global (kbd "C-u") 'evil-scroll-up)
+  (evil-define-key 'normal 'global (kbd "C-w q") 'delete-window)
+  (evil-define-key 'normal 'global (kbd "zs") 'outline-toggle-children)
+  (evil-define-key 'normal 'global (kbd "zd") 'outline-show-children)
+  (evil-define-key 'normal 'global (kbd "zf") 'outline-show-subtree)
+  (evil-define-key 'normal 'global (kbd "zg") 'outline-hide-subtree)
+  ; neotree maps
+  (evil-define-key 'normal neotree-mode-map (kbd "TAB") 'neotree-enter)
+  (evil-define-key 'normal neotree-mode-map (kbd "q") 'neotree-hide)
+  (evil-define-key 'normal neotree-mode-map (kbd "o") 'neotree-enter)
+  (evil-define-key 'normal neotree-mode-map (kbd "mc") 'neotree-create-node)
+  (evil-define-key 'normal neotree-mode-map (kbd "md") 'neotree-delete-node)
+  (evil-define-key 'normal neotree-mode-map (kbd "me") 'neotree-rename-node)
+  (evil-define-key 'normal neotree-mode-map (kbd "RET") 'neotree-enter)
+  (evil-define-key 'normal neotree-mode-map (kbd "r") 'neotree-refresh)
+  (evil-define-key 'normal neotree-mode-map (kbd "u") 'neotree-select-up-node)
+  (evil-define-key 'normal neotree-mode-map (kbd "A") 'neotree-stretch-toggle)
+  (evil-define-key 'normal neotree-mode-map (kbd "H") 'neotree-hidden-file-toggle)
+  ; orgmode maps
+  (evil-define-key 'normal org-mode-map (kbd "t") 'org-todo)
+  (evil-define-key 'normal org-mode-map (kbd "T") 'org-todo-list)
+  (evil-define-key 'normal org-mode-map (kbd "H") 'org-shiftleft)
+  (evil-define-key 'normal org-mode-map (kbd "L") 'org-shiftright)
+  (evil-define-key 'normal org-mode-map (kbd "J") 'org-insert-heading-after-current)
+  (evil-define-key 'normal org-mode-map (kbd "K") 'org-insert-subheading)
+  (evil-define-key 'normal org-mode-map (kbd "<") 'org-metaleft)
+  (evil-define-key 'normal org-mode-map (kbd ">") 'org-metaright)
+  (evil-define-key 'normal org-mode-map (kbd "mk") 'org-move-subtree-up)
+  (evil-define-key 'normal org-mode-map (kbd "mj") 'org-move-subtree-down)
+  )
 (provide 'init-evil)
-;;; init-evil ends here
