@@ -1,0 +1,19 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: bash-header-comment
+# key: header-comment
+# binding: direct-keybinding
+# --
+#!/bin/bash
+#==============================================================================
+# 
+#         FILE : ${1:`(file-name-nondirectory (buffer-file-name))`} 
+#
+#         USAGE: ${2:`(file-name-nondirectory (buffer-file-name))`} $3
+#
+#        AUTHOR: Jae Yong Lee (lee896@illinois.edu)
+#  ORGANIZATION: University of Illinois at Urbana-Champaign
+#   DESCRIPTION: $4
+#       CREATED: ${5:`(format-time-string "%b %d, %Y")`}
+#         NOTES: $6
+#
+#==============================================================================
