@@ -32,7 +32,7 @@
       "cl" 'evilnc-comment-or-uncomment-lines
       "a" 'org-agenda
       "z" 'org-show-todo-tree
-      "c" 'org-archive-subtree
+      "x" 'org-archive-subtree
       "ui" (lambda () (interactive)
              (find-file-other-window user-init-file))
       "op" (lambda () (interactive)
