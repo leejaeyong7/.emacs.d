@@ -73,7 +73,7 @@
  '(js-switch-indent-offset 2)
  '(package-selected-packages
    (quote
-    (cmake-mode esup org counsel ivy writeroom-mode yasnippet emmet-mode)))
+    (vue-mode dockerfile-mode cmake-mode esup org counsel ivy writeroom-mode yasnippet emmet-mode)))
  '(writeroom-mode-line t)
  '(writeroom-restore-window-config t))
 
