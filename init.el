@@ -38,11 +38,14 @@
 (require 'init-package)
 (require 'init-projectile)
 (require 'init-keyboard)
+(require 'init-neotree)
 (require 'init-multiple-cursor)
-(setq ido-enable-flex-matching t)
-(setq ido-everywhere t)
-(ido-mode 1)
 
+;; ivy depends on projectile
+(require 'init-ivy)
+
+;; search depends on ivy and mc
+(require 'init-search)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (custom-set-variables
@@ -50,7 +53,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (multiple-cursors ag use-package projectile helm))))
+ '(package-selected-packages
+   (quote
+    (counsel-projectile counsel swiper ivy neotree phi-search multiple-cursors ag use-package projectile helm))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

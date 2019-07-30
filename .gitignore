@@ -1,5 +1,9 @@
-elpa/*
+# local undo related files
 *~
+.*
+[#]*[#]
+# package emacs related files
+elpa/*
 ido.last
 recentf
 auto-save-list/
