@@ -16,27 +16,13 @@
 ;; setup path for loading extensions
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; -- System level setups -- ;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;; Emacs Default modes
-(if window-system
-    (progn
-      ;; remove scroll bar
-      (scroll-bar-mode -1)
-      (tool-bar-mode -1)))
-
-(menu-bar-mode -1)
-(column-number-mode 1)
-(show-paren-mode 1)
-(recentf-mode 1)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; -- package level setups -- ;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
+(require 'init-frame)
 (require 'init-package)
 (require 'init-projectile)
+;;(require 'init-evil)
 (require 'init-keyboard)
 (require 'init-neotree)
 (require 'init-multiple-cursor)
@@ -55,7 +41,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (counsel-projectile counsel swiper ivy neotree phi-search multiple-cursors ag use-package projectile helm))))
+    (python-mode counsel-projectile counsel swiper ivy neotree phi-search multiple-cursors ag use-package projectile helm))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

@@ -6,8 +6,8 @@
   (global-set-key (kbd "C-c C-r") 'ivy-resume)
   ;; add additional projectile config iff using ivy
   (use-package counsel-projectile
-    :config
-    (counsel-projectil-mode 1))
+    :init
+    (counsel-projectile-mode 1))
   )
 
 (provide 'init-ivy)
