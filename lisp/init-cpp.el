@@ -8,5 +8,6 @@
 (add-hook 'c++-mode-hook 'my-cc-mode-hook)
 (add-hook 'c-mode-common-hook (lambda () (setq comment-start "/* "
      comment-end " */")))
+(use-package cuda-mode)
 (provide 'init-cpp)
 ;;; init-javascript ends here

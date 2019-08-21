@@ -30,6 +30,7 @@
       "=" 'writeroom-mode
       "\\" 'toggle-frame-fullscreen
       "cl" 'evilnc-comment-or-uncomment-lines
+      "cu" 'uncomment-region
       "a" 'org-agenda
       "z" 'org-show-todo-tree
       "x" 'org-archive-subtree
